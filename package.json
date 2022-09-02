@@ -1,22 +1,26 @@
 {
-  "name": "github",
+  "name": "huxg",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://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@github.com/huxiguo/huxiguo.github.io.git"
+    "url": "git+https://github.com/iiimix/huxg.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/huxiguo/huxiguo.github.io/issues"
+    "url": "https://github.com/iiimix/huxg/issues"
   },
-  "homepage": "https://github.com/huxiguo/huxiguo.github.io#readme",
+  "homepage": "https://github.com/iiimix/huxg#readme",
   "devDependencies": {
     "vuepress": "^2.0.0-beta.51"
   }
