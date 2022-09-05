@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/iiimix/huxg#readme",
   "devDependencies": {
+    "@vuepress/plugin-container": "^2.0.0-beta.51",
     "vuepress": "^2.0.0-beta.51"
   }
 }

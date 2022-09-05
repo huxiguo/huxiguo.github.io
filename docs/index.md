@@ -2,4 +2,6 @@
 
 ## vuepress
 
-ES6特性[指导](./guide/guide1.md)
+ES6 特性[指导](./guide/guide1.md)
+
+## [Linux 指令](./command/linux_command.md)
