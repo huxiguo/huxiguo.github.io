@@ -26,6 +26,11 @@ export default {
           text: 'ES6',
           collapsible: true,
           children: ['/guide/guide1.md']
+        },
+        {
+          text: 'register',
+          collapsible: true,
+          children: ['/register/TencentCloud.md']
         }
       ]
     }
