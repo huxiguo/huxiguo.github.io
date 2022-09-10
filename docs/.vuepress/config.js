@@ -1,5 +1,6 @@
 import { defaultTheme } from 'vuepress'
 export default {
+  base:'/',
   lang: 'zh-CN',
   title: 'huxg的笔记',
   description: '这是我的第一个 VuePress 站点',
