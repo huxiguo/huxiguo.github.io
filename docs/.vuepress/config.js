@@ -1,6 +1,6 @@
 import { defaultTheme } from 'vuepress'
 export default {
-  base:'/',
+  base: '/',
   lang: 'zh-CN',
   title: 'huxg的笔记',
   description: '这是我的第一个 VuePress 站点',
@@ -32,6 +32,11 @@ export default {
           text: 'register',
           collapsible: true,
           children: ['/register/TencentCloud.md']
+        },
+        {
+          text: 'Graduation_project',
+          collapsible: true,
+          children: ['/Graduation_Project/train.md']
         }
       ]
     }
