@@ -379,6 +379,165 @@ let person = { name: 'tom', age: 18 }
 getProp(person, 'age')
 ```
 
+:::tip 说明
+`keyof` 接收一个对象类型，生成键名称的联合类型
+
+本例中 K 受 T 约束，K 只能是 T 所有键中的任意一个
+:::
+
+泛型接口
+
+```ts
+interface IdFunc<T> {
+  id: (value: T) => T
+  ids: () => T[]
+}
+let obj: IdFunc<string> = {
+  id(value) {
+    return value
+  },
+  ids() {
+    return ['a']
+  }
+}
+```
+
+:::tip 说明
+接口的类型变量对接口中所有成员可见
+
+使用泛型接口时需要显示指定类型
+:::
+
+泛型工具类型
+
+:orange_circle: `Partial<Type>` 用来构造一个类型，将 Type 的所有属性设置为可选
+
+```ts
+interface Props {
+  id: string
+  children: number[]
+}
+
+type PartialProps = Partial<Props>
+
+// 所有属性都为必填
+let MyProps: Props = {
+  id: 'aaa',
+  children: [1, 2]
+}
+
+// 所有属性变为可选
+let MyPartialProps: PartialProps = {
+  id: 'aa'
+}
+```
+
+:orange_circle: `Readonly<Type>` 构造一个类型，将 Type 所有属性设置为只读
+
+```ts
+interface People {
+  name: string
+  age: number
+}
+
+type ReadonlyPeople = Readonly<People>
+
+let Tom: ReadonlyPeople = {
+  name: 'Tom',
+  age: 20
+}
+
+// 无法分配到 "age" ，因为它是只读属性
+// Tom.age = 21
+```
+
+:orange_circle: `Pick<Type, Keys>` 从 Type 里面选择一组属性来构造新类型
+
+```ts
+interface Text {
+  id: number
+  title: string
+  author: string
+}
+
+type PickText = Pick<Text, 'id' | 'author'>
+
+let MyPickText: PickText = {
+  id: 1,
+  author: 'tom'
+}
+```
+
+:::tip 说明
+`Type:` 选择谁的属性
+
+`Keys:` 选择那些属性
+
+第二个类型变量传入的属性只能是第一个类型变量存在的属性
+:::
+
+:orange_circle: `Record<Keys,Type>` 构造一个对象类型，属性键为`Keys` 属性类型为`Type`
+
+```ts
+type RecordObj = Record<'id' | 'name' | 'age', string[]>
+
+let Obj: RecordObj = {
+  id: ['1'],
+  name: ['1'],
+  age: ['1']
+}
+```
+
+:::tip 说明
+创建的类型里的属性类型都是一致的
+:::
+
 ## 索引签名类型 和 索引查询类型
 
+### 索引签名类型
+
+使用场景：无法确定对象中有哪些属性
+
+```ts
+interface AnyObj {
+  [key: string]: number | string
+}
+
+let Obj: AnyObj = {
+  1: 1,
+  aaa: '111'
+}
+```
+
+:::tip 说明
+使用 `[key: string]` 约束接口中允许出现的属性名，表示只要是`string`类型的都可以
+
+可以出现任意多个
+:::
+
+### 索引查询类型
+
 ## 映射类型
+
+`Partial<Type>` 实现原理
+
+```ts
+type Partial<T> = {
+  [P in keyof T]?: T[P]
+}
+
+interface Props {
+  id: string
+  children: number[]
+}
+
+type PartialProps = Partial<Props>
+```
+
+:::tip 说明
+`keyof T` => `keyof Props` 表示获取 Props 所有的键 `'id'|'children'`
+
+`[]?`,表示变为可选属性
+
+`T[P]` 表示获取 T 中每个键对应的类型
+:::
