@@ -31,6 +31,10 @@ export default {
           children: ['/guide/guide1.md']
         },
         {
+          text: 'React',
+          children: ['/React/README.md']
+        },
+        {
           text: 'register',
           children: ['/register/TencentCloud.md']
         },
@@ -74,13 +78,23 @@ export default {
         },
         {
           text: '类型',
-          children: ['/TypeScript/type.md','/TypeScript/high_type.md']
+          children: ['/TypeScript/type.md', '/TypeScript/high_type.md']
+        },
+        {
+          text: '类型声明文件',
+          children: ['/TypeScript/typeFile.md']
+        }
+      ],
+      '/React': [
+        {
+          text: 'React入门',
+          children: ['/React/accidence.md','/React/jsx.md','/React/commponet.md','/React/event.md','/React/state.md']
         }
       ]
     },
     lastUpdated: true,
     lastUpdatedText: '最近更新',
     contributors: true,
-    contributorsText:'贡献者'
+    contributorsText: '贡献者'
   })
 }

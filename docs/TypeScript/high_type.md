@@ -517,6 +517,22 @@ let Obj: AnyObj = {
 
 ### 索引查询类型
 
+作用：查询属性的类型
+
+```ts
+type Props = {
+  a: number
+  b: string
+  c: boolean
+}
+
+type PropsA = Props['a']
+
+type PropsAB = Props['a' | 'b']
+
+type PropsAll = Props[keyof Props]
+```
+
 ## 映射类型
 
 `Partial<Type>` 实现原理
