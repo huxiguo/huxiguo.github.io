@@ -41,9 +41,13 @@ export default {
         {
           text: 'Graduation_project',
           children: ['/Graduation_Project/train.md']
+        },
+        {
+          text: 'STM32',
+          children: ['/STM32/README.md']
         }
       ],
-      '/command/': [
+      '/command': [
         {
           text: 'Linux指令',
           children: ['/command/linux_command.md']
@@ -51,6 +55,10 @@ export default {
         {
           text: 'Vuecli指令',
           children: ['/command/Vue_cli.md']
+        },
+        {
+          text: 'Git指令',
+          children: ['/Git/git.md']
         }
       ],
       '/Graduation_Project': [
@@ -62,7 +70,11 @@ export default {
       '/guide': [
         {
           text: 'ES6',
-          children: ['/guide/guide1.md']
+          children: [
+            '/guide/Symbol.md',
+            '/guide/Prototype.md',
+            '/guide/Destructuring.md'
+          ]
         }
       ],
       '/register': [
@@ -88,7 +100,36 @@ export default {
       '/React': [
         {
           text: 'React入门',
-          children: ['/React/accidence.md','/React/jsx.md','/React/commponet.md','/React/event.md','/React/state.md']
+          children: [
+            '/React/accidence.md',
+            '/React/jsx.md',
+            '/React/commponet.md',
+            '/React/event.md',
+            '/React/state.md',
+            '/React/Props.md',
+            '/React/Refs.md',
+            '/React/active.md'
+          ]
+        }
+      ],
+      '/Git': [
+        {
+          text: 'Git指令',
+          children: ['/Git/git.md']
+        },
+        {
+          text: 'Github',
+          children: ['/Git/github.md']
+        }
+      ],
+      '/STM32': [
+        {
+          text: '时钟',
+          children: ['/STM32/clock.md']
+        },
+        {
+          text: 'GPIO',
+          children: ['/STM32/GPIO.md']
         }
       ]
     },

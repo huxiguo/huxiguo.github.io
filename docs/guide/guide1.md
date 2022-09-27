@@ -6,10 +6,8 @@
 
 ## 箭头函数
 
-## 原型
+## [解构赋值](Destructuring.md)
 
-每个函数都有一个`prototype` 显示原型
+## [Symbol](Symbol.md)
 
-每一个实例对象都有一个 `__proto__` 隐式原型
-
-实例的隐式原型的值为构造函数的显示原型的值
+## [原型](Prototype.md)
