@@ -35,6 +35,10 @@ export default {
           children: ['/React/README.md']
         },
         {
+          text: 'eCharts',
+          children: ['/eCharts/option.md']
+        },
+        {
           text: 'register',
           children: ['/register/TencentCloud.md']
         },
@@ -59,6 +63,12 @@ export default {
         {
           text: 'Git指令',
           children: ['/Git/git.md']
+        }
+      ],
+      '/eCharts': [
+        {
+          text: '基础配置项',
+          children: ['/echarts/option.md']
         }
       ],
       '/Graduation_Project': [
