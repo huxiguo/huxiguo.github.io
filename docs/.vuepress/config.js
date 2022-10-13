@@ -3,7 +3,7 @@ export default {
   base: '/',
   lang: 'zh-CN',
   title: 'seekhoo',
-  description: '这是我的第一个 VuePress 站点',
+  description: 'my blogs',
   theme: defaultTheme({
     // 默认主题配置
     navbar: [
@@ -20,66 +20,80 @@ export default {
       '/': [
         {
           text: '指令',
+          collapsible: true,
           children: ['/command/README.md']
         },
         {
           text: 'TypeScript',
+          collapsible: true,
           children: ['/TypeScript/README.md']
         },
         {
           text: 'ES6',
+          collapsible: true,
           children: ['/guide/guide1.md']
         },
         {
+          text: 'Vue',
+          collapsible: true,
+          children: ['/Vue/README.md']
+        },
+        {
           text: 'React',
+          collapsible: true,
           children: ['/React/README.md']
         },
         {
           text: 'eCharts',
+          collapsible: true,
           children: ['/eCharts/option.md']
         },
         {
           text: 'register',
+          collapsible: true,
           children: ['/register/TencentCloud.md']
         },
         {
           text: 'Graduation_project',
+          collapsible: true,
           children: ['/Graduation_Project/train.md']
         },
         {
           text: 'STM32',
+          collapsible: true,
           children: ['/STM32/README.md']
         }
       ],
-      '/command': [
+      '/command/': [
         {
           text: 'Linux指令',
+          collapsible: true,
           children: ['/command/linux_command.md']
         },
         {
-          text: 'Vuecli指令',
-          children: ['/command/Vue_cli.md']
-        },
-        {
           text: 'Git指令',
+          collapsible: true,
           children: ['/Git/git.md']
         }
       ],
-      '/eCharts': [
+      '/eCharts/': [
         {
           text: '基础配置项',
+          collapsible: true,
           children: ['/echarts/option.md']
         }
       ],
-      '/Graduation_Project': [
+      '/Graduation_Project/': [
         {
           text: '毕业设计思路',
+          collapsible: true,
           children: ['/Graduation_Project/train.md']
         }
       ],
-      '/guide': [
+      '/guide/': [
         {
           text: 'ES6',
+          collapsible: true,
           children: [
             '/guide/Symbol.md',
             '/guide/Prototype.md',
@@ -87,29 +101,46 @@ export default {
           ]
         }
       ],
-      '/register': [
+      '/register/': [
         {
           text: 'register',
+          collapsible: true,
           children: ['/register/TencentCloud.md']
         }
       ],
-      '/TypeScript': [
+      '/TypeScript/': [
         {
           text: '开始使用',
+          collapsible: true,
           children: ['/TypeScript/base.md']
         },
         {
           text: '类型',
+          collapsible: true,
           children: ['/TypeScript/type.md', '/TypeScript/high_type.md']
         },
         {
           text: '类型声明文件',
+          collapsible: true,
           children: ['/TypeScript/typeFile.md']
         }
       ],
-      '/React': [
+      '/vue': [
+        {
+          text: 'Vue',
+          collapsible: true,
+          children:['/vue/vue2.md']
+        },
+        {
+          text: 'Vue Cli指令',
+          collapsible: true,
+          children: ['/vue/Vue_cli.md']
+        },
+      ],
+      '/React/': [
         {
           text: 'React入门',
+          collapsible: true,
           children: [
             '/React/accidence.md',
             '/React/jsx.md',
@@ -122,23 +153,27 @@ export default {
           ]
         }
       ],
-      '/Git': [
+      '/Git/': [
         {
           text: 'Git指令',
+          collapsible: true,
           children: ['/Git/git.md']
         },
         {
           text: 'Github',
+          collapsible: true,
           children: ['/Git/github.md']
         }
       ],
-      '/STM32': [
+      '/STM32/': [
         {
           text: '时钟',
+          collapsible: true,
           children: ['/STM32/clock.md']
         },
         {
           text: 'GPIO',
+          collapsible: true,
           children: ['/STM32/GPIO.md']
         }
       ]
