@@ -5,6 +5,211 @@ title: Vue2
 
 # Vue2
 
+## Vue 历史
+
+- 2013 年受到 Angular 框架启发，开发出 Seed，12 月更名为 Vue
+- 2014 年正式对外发布
+- 2015 年 10 月 27 日正式发布 Vue1.0.0 Evangelion
+- 2016 年发布 Vue2.0.0 Ghost in the Shell
+- 2020 年发布 Vue3.0.0 One Piece
+
+## Vue 特点
+
+- 组件化模式，提高代码复用性，更好的维护
+- 声明式编码，无需直接操作 DOM
+
+## 模板语法
+
+- 插值语法
+
+`{{xxx}}`
+
+括号里面可以写 js 表达式
+
+- 指令语法
+
+  - 数据绑定
+
+    - `v-bind` 单向绑定
+
+    数据只能从 data 流向页面
+
+    ```js
+    <!-- 完整语法 -->
+    <a v-bind:href="url">...</a>
+
+    <!-- 缩写 -->
+    <a :href="url">...</a>
+    ```
+
+    - `v-model` 双向绑定
+
+    数据能从 data 流向页面也能从页面流向 data
+
+    一般用于表单类元素
+
+    ```js
+    v-model:value
+    ```
+
+## MVVM 模型
+
+- M: 模型 (Model):data 中的数据
+- V: 视图 (View):模板代码
+- VM：视图模型 (ViewModel): Vue 实例
+
+data 中的所有属性都会挂载到 vm 上
+
+Vue 原型的所有属性，在模板中都能直接使用
+
+## 数据代理
+
+通过一个对象代理对另一个对象中属性的操作
+
+为了更方便的操作 data 中的数据
+
+把 data 中的数据放到 vm 的\_data 上，通过 Object.defineProperty()把 data 对象的属性添加到 vm 上，为每个属性都指定 getter 和 setter
+
+## 事件处理
+
+`v-on` 指令
+
+```vue
+<button v-on:click="showMsg">666</button>
+<button @click="showMsg">999</button>
+
+// 传递参数
+<button @click="showMsg($event, xx)">999</button>
+// $event : 事件源
+```
+
+事件处理函数配置在 method 中，最终都会在 vm 上
+
+method 中配置的函数，不要使用箭头函数，this 指向会改变
+
+## 事件修饰符
+
+- `prevent`:阻止默认事件
+- `stop`:阻止事件冒泡
+- `once`:事件只触发一次
+- `capture`:使用事件的捕获模式
+- `self`:只有 event.target 是当前操作的元素才触发
+- `passive`:事件的默认行为立即执行，无需等待事件回调执行完成
+
+```js
+// 阻止默认行为
+<a href="www.seekhoo.cn" @click="showMsg"></a>
+....
+methods:{
+  showMsg(e){
+    e.preventDefault()
+    console.log(666)
+    }
+}
+// 精简法
+<a href="www.seekhoo.cn" @click.prevent="showMsg"></a>
+```
+
+## 按键修饰符
+
+```vue
+<input type="text" @keyup.enter="showMsg" />
+```
+
+- `.enter`
+- `.tab` 配合 keydown 使用
+- `.delete`(捕获“删除”和“退格”键)
+- `.esc`
+- `.space`
+- `.up`
+- `.down`
+- `.left`
+- `.right`
+
+系统修饰键
+
+- `ctrl`
+- `alt`
+- `shift`
+- `meta`
+
+配合 keyup 按下修饰键同时再按下其他键随后释放其他键，事件才被触发
+
+配合 keydown 正常使用
+
+## 计算属性值
+
+```js
+computed(){
+  fullName() {
+    return this.firstName + '-' + this.lastName
+  }
+}
+```
+
+## watch
+
+被监视的属性发生变化时，回调函数自动执行
+
+监视的属性必须存在才能监视
+
+```js
+watch: {
+  weather: {
+    // 自动执行一次
+    immediate:true,
+    handler(newVal,oldVal) {
+      console.log(111)
+    }
+  }
+}
+```
+
+- 深度监视
+  - watch 默认不监视对象内部的改变
+  - 配置 deep:true 可以监视对象内部值的改变
+
+```js
+watch: {
+  weather: {
+    // 自动执行一次
+    immediate:true,
+    deep:true, // 开启深度监视
+    handler(newVal,oldVal) {
+      console.log(111)
+    }
+  }
+}
+```
+
+## `computed`和`watch`区别
+
+`computed` 能完成的 `watch` 都能完成,但是`watch`能完成异步操作
+
+## 条件渲染
+
+`v-show`
+
+控制元素显示与隐藏
+
+添加`display:none`
+
+`v-if`
+
+直接删除元素
+
+`v-if`配合`<template v-if="true">xxx</template>`使用
+
+## 列表渲染
+
+```vue
+<ul>
+<li v-for="item in person" :key="item.id"></li>
+</ul>
+```
+
+有相同父元素的子元素必须有独特的 key。重复的 key 会造成渲染错误
+
 ## `mixin`混入
 
 把多个组件公用的配置提取成一个混入对象

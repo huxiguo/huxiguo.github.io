@@ -97,7 +97,8 @@ export default {
           children: [
             '/guide/Symbol.md',
             '/guide/Prototype.md',
-            '/guide/Destructuring.md'
+            '/guide/Destructuring.md',
+            '/guide/Object.md'
           ]
         }
       ],
