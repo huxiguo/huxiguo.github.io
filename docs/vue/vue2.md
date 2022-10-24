@@ -210,6 +210,90 @@ watch: {
 
 有相同父元素的子元素必须有独特的 key。重复的 key 会造成渲染错误
 
+## `Key`
+
+- 虚拟 DOM 中 key 的作用
+  - key 是虚拟 DOM 对象的标识，当状态中的数据发生改变时，Vue 会根据 新数据生成新的虚拟 DOM，随后进行差异比较
+- 比较规则
+  - 在旧虚拟 DOM 找到与新的虚拟 DOM 相同的 key
+    - 如果虚拟 DOM 内容没有改变，直接使用之前的真实 DOM
+    - 如果改变了，则生成新的真实 DOM，替换掉之前的真实 DOM
+  - 在旧虚拟 DOM 没有找到与新的虚拟 DOM 相同的 key
+    - 创建新的真实 DOM 渲染到页面上
+- 用 index 作为 key 可能引起的问题
+  - 若对数据进行逆序添加、删除等破坏顺序的操作会产生没必要的真实 DOM 更新
+  - 如果结构中还包含输入类 DOM，会产生错误的 DOM 更新
+- 最好选用唯一标识最为 key,如果不存在对数据的破坏顺序操作,仅仅只是渲染列表用于展示用 index 作为 key 是没问题的
+
+## watch
+
+问题引出
+
+```js
+...
+data:{
+  persons: [
+    {id: '001',name: '马冬梅',age: 32},
+    {id: '002',name: '周冬雨',age: 19},
+    {id: '003',name: '周杰伦',age: 25},
+    {id: '004',name: '温兆伦',age: 21}
+  ]
+},
+methods:{
+  changePerson(){
+    this.persons[0].name='zs' // 生效
+    this.persons[0].age=20 // 生效
+
+    this.persons[0] = {id:'001',name:'zs',age:'20'} // 不生效，vue监测不到数据改变
+  }
+}
+...
+```
+
+## Vue 检测数据原理
+
+检测对象简单的基本原理
+
+```js
+let data = {
+  name: 'zs'
+}
+
+// 创建监视的实例对象，监视data中的属性变化
+const obs = new Observer(data)
+
+let vm = {}
+
+vm._data = data = obs
+
+// Observer 构造函数
+function Observer(obj) {
+  // 汇总对象中所有的属性形成一个数组
+  const keys = Object.keys(obj)
+  keys.forEach((k) => {
+    Object.defineProperty(this, k, {
+      get() {
+        return obj[k]
+      },
+      set(val) {
+        obj[k] = val
+      }
+    })
+  })
+}
+```
+
+Vue.set()
+
+```js
+Vue.set(target, propertyName, value)
+// 可以向响应式对象中添加一个property，并且新的property也是响应式
+
+// 添加的对象不能是Vue实例，或者Vue实例的根数据对象
+```
+
+检测数组
+
 ## `mixin`混入
 
 把多个组件公用的配置提取成一个混入对象

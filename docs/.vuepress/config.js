@@ -98,7 +98,8 @@ export default {
             '/guide/Symbol.md',
             '/guide/Prototype.md',
             '/guide/Destructuring.md',
-            '/guide/Object.md'
+            '/guide/Object.md',
+            '/guide/Array.md'
           ]
         }
       ],
@@ -130,13 +131,13 @@ export default {
         {
           text: 'Vue',
           collapsible: true,
-          children:['/vue/vue2.md']
+          children: ['/vue/vue2.md']
         },
         {
           text: 'Vue Cli指令',
           collapsible: true,
           children: ['/vue/Vue_cli.md']
-        },
+        }
       ],
       '/React/': [
         {
@@ -176,6 +177,11 @@ export default {
           text: 'GPIO',
           collapsible: true,
           children: ['/STM32/GPIO.md']
+        },
+        {
+          text: '串行通信',
+          collapsible: true,
+          children: ['/STM32/Serial.md']
         }
       ]
     },
