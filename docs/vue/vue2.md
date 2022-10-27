@@ -252,6 +252,8 @@ methods:{
 
 ## Vue 检测数据原理
 
+Vue 会监测 data 中所有层级的数据
+
 检测对象简单的基本原理
 
 ```js
@@ -287,12 +289,41 @@ Vue.set()
 
 ```js
 Vue.set(target, propertyName, value)
+vm.$set(target, propertyName, value)
 // 可以向响应式对象中添加一个property，并且新的property也是响应式
 
 // 添加的对象不能是Vue实例，或者Vue实例的根数据对象
 ```
 
 检测数组
+
+Vue 对数组变更方法进行了包裹，使用以下方法也可以触发视图的更新
+
+`push()` ` pop()` `shift()` `unshift()` `splice()` `sort()` `reverse()`
+
+## 过滤器
+
+过滤器可以串联使用
+
+```js
+// 使用过滤器
+{{time | timeFormater}}
+
+...
+filters:{
+  timeFormater(){
+    // 自动传入参数 time
+    // 可以自己传入参数，接受的参数第一个为默认传入的，其他参数依次接受
+  }
+}
+...
+```
+
+全局过滤器
+
+```js
+Vue.filter(name, function () {})
+```
 
 ## `mixin`混入
 

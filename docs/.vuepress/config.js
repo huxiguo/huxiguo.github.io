@@ -19,9 +19,19 @@ export default {
     sidebar: {
       '/': [
         {
-          text: '指令',
+          text: 'CSS',
           collapsible: true,
-          children: ['/command/README.md']
+          children: ['/CSS/README.md']
+        },
+        {
+          text: 'javaScript',
+          collapsible: true,
+          children: ['/js/README.md']
+        },
+        {
+          text: 'ES6',
+          collapsible: true,
+          children: ['/guide/guide1.md']
         },
         {
           text: 'TypeScript',
@@ -29,9 +39,9 @@ export default {
           children: ['/TypeScript/README.md']
         },
         {
-          text: 'ES6',
+          text: '工程化',
           collapsible: true,
-          children: ['/guide/guide1.md']
+          children: ['/project/README.md']
         },
         {
           text: 'Vue',
@@ -42,6 +52,16 @@ export default {
           text: 'React',
           collapsible: true,
           children: ['/React/README.md']
+        },
+        {
+          text: 'node.js',
+          collapsible: true,
+          children: ['/node/README.md']
+        },
+        {
+          text: '指令',
+          collapsible: true,
+          children: ['/command/README.md']
         },
         {
           text: 'eCharts',
@@ -182,6 +202,34 @@ export default {
           text: '串行通信',
           collapsible: true,
           children: ['/STM32/Serial.md']
+        }
+      ],
+      '/CSS/': [
+        {
+          text: 'CSS基础',
+          collapsible: true,
+          children: ['/CSS/css.md']
+        }
+      ],
+      '/js/': [
+        {
+          text: 'javascript',
+          collapsible: true,
+          children: ['/js/js.md']
+        }
+      ],
+      '/node/': [
+        {
+          text: 'nodejs',
+          collapsible: true,
+          children: ['/node/node.md']
+        }
+      ],
+      '/project/': [
+        {
+          text: '工程化',
+          collapsible: true,
+          children: ['/project/project.md']
         }
       ]
     },
