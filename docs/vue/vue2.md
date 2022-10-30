@@ -325,6 +325,91 @@ filters:{
 Vue.filter(name, function () {})
 ```
 
+## 自定义指令
+
+指令名称多个单词拼接时 => `v-big-number`
+
+`'big-number' (){}`
+
+```js
+// 自定义一个指令 放大数值10倍
+
+directives: {
+  // 指令与元素成功绑定时调用，模板重新解析时调用
+  big(element, binding) {
+    // element 真实DOM binding 绑定对象
+    element.innerText = binding.value * 10
+  }
+}
+
+// 定义 v-fbind 自动获取焦点
+
+irectives: {
+  // 指令与元素成功绑定时调用，模板重新解析时调用
+  fbind(element, binding) {
+    element.value = binding.value
+    Vue.nextTick(() => {
+      element.focus()
+    })
+  }
+  fbind: {
+    // 指令与元素成功绑定调用
+    bind(element, binding) {
+      // 此处的this是window
+      element.value = binding.value
+    },
+    // 指令所在元素放入页面时调用
+    inserted(element, binding) {
+      element.focus()
+    },
+    // 指令的模板重新调用
+    update(element, binding) {
+      element.focus()
+    }
+  }
+}
+```
+
+创建全局指令
+
+```js
+Vue.directive('fbind', {
+  // 指令与元素成功绑定调用
+  bind(element, binding) {
+    element.value = binding.value
+  },
+  // 指令所在元素放入页面时调用
+  inserted(element, binding) {
+    element.focus()
+  },
+  // 指令的模板重新调用
+  update(element, binding) {
+    element.focus()
+  }
+})
+```
+
+## 生命周期
+
+![生命周期](./images/lifecycle.png)
+生命周期函数
+
+`mounted`
+
+Vue 完成模板解析后并把真实 DOM 放入页面后(挂载完成)调用
+
+`beforeCreate`
+
+此时无法通过 vm 访问到 data 中的数据、methods 中的方法
+
+`created`
+
+可以访问 data methods
+
+`beforeMount`
+
+在虚拟 DOM 转成真实 DOM 之前， 页面都是未经编译的 DOM，所有对 DOM 的操作都不奏效
+
 ## `mixin`混入
 
 把多个组件公用的配置提取成一个混入对象
