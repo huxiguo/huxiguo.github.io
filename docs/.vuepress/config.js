@@ -151,7 +151,7 @@ export default {
         {
           text: 'Vue',
           collapsible: true,
-          children: ['/vue/vue2.md']
+          children: ['/vue/vue2.md', '/vue/communication.md', '/vue/vuex.md']
         },
         {
           text: 'Vue Cli指令',

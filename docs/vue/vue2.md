@@ -394,7 +394,9 @@ Vue.directive('fbind', {
 ![生命周期](./images/lifecycle.png)
 生命周期函数
 
-`mounted`
+### 挂载流程
+
+#### `mounted`
 
 Vue 完成模板解析后并把真实 DOM 放入页面后(挂载完成)调用
 
@@ -402,13 +404,39 @@ Vue 完成模板解析后并把真实 DOM 放入页面后(挂载完成)调用
 
 此时无法通过 vm 访问到 data 中的数据、methods 中的方法
 
-`created`
+#### `created`
 
 可以访问 data methods
 
-`beforeMount`
+#### `beforeMount`
 
-在虚拟 DOM 转成真实 DOM 之前， 页面都是未经编译的 DOM，所有对 DOM 的操作都不奏效
+在虚拟 DOM 转成真实 DOM 之前， 页面都是未经编译的 DOM，所有对 DOM 的操作最终都不奏效
+
+#### `mounted`
+
+真实 DOM 插入页面后，一般在此进行开启定时器，发送网络请求等初始化操作
+
+### 更新流程
+
+`beforeUpdate`
+
+数据是新的，页面还未更新，页面和数据尚未保持同步
+
+`updated`
+
+页面和数据保持同步
+
+### 销毁流程
+
+`beforeDestroy`
+
+vm 的所有都可用，对数据的修改不会更新，一般在此时关闭定时器，解绑自定义事件
+
+`destroyed`
+
+## 组件
+
+命名：一个单词 `School` 首字母大写，多单词 `my-school` `MySchool`
 
 ## `mixin`混入
 

@@ -1,0 +1,1 @@
+import{_ as c,o as t,c as a,a as e,b as o}from"./app.51f11012.js";const r={},s=e("h1",{id:"\u65F6\u949F",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#\u65F6\u949F","aria-hidden":"true"},"#"),o(" \u65F6\u949F")],-1),n=[s];function _(d,l){return t(),a("div",null,n)}const h=c(r,[["render",_],["__file","clock.html.vue"]]);export{h as default};
