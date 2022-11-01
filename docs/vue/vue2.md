@@ -489,3 +489,80 @@ export default {
 使用插件
 
 `Vue.use(plugins)`
+
+## 组件的自定义事件
+
+click keyup 是 js 内设置的应用在 html 元素上的事件
+
+自定义事件应用在组件
+
+[详情](communication.md)
+
+解绑事件
+
+```js
+// 解绑一个自定义事件
+unbind(){
+  this.$off('sendMsg')
+}
+
+// 解绑多个自定义事件
+unbind(){
+  this.$off(['sendMsg','xxx','yyy'])
+}
+
+// 解绑所有
+unbind(){
+  this.$off()
+}
+```
+
+## 全局事件总线
+
+GlobalEventBus 适用于任意组件通信
+
+安装全局事件总线
+
+```js
+new Vue({
+  beforeCreate() {
+    Vue.prototype.$bus = this
+  }
+})
+```
+
+使用事件总线
+
+```vue
+// 组件A 接受
+<template>
+  <div></div>
+</template>
+<script>
+export default {
+  methods: {
+    getMsg(msg){...}
+  },
+  mounted(){
+    this.$bus.$on('demo',this.getMsg)
+  }
+}
+</script>
+// 组件B 发送
+<template>
+  <div></div>
+</template>
+<script>
+export default {
+  methods: {
+    sendMsg(msg) {
+      this.$bus.$emit('demo', 666)
+    }
+  },
+  // 在beforeDestroy中解绑事件
+  beforeDestroy() {
+    this.$bus.$off('demo')
+  }
+}
+</script>
+```

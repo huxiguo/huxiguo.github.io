@@ -69,6 +69,11 @@ export default {
           children: ['/eCharts/option.md']
         },
         {
+          text: 'OS',
+          collapsible: true,
+          children: ['/OS/README.md']
+        },
+        {
           text: 'register',
           collapsible: true,
           children: ['/register/TencentCloud.md']
@@ -211,6 +216,13 @@ export default {
           children: ['/CSS/css.md']
         }
       ],
+      '/OS/': [
+        {
+          text: '操作系统',
+          collapsible: true,
+          children: ['/OS/system.md']
+        }
+      ],
       '/js/': [
         {
           text: 'javascript',
@@ -223,6 +235,11 @@ export default {
           text: 'nodejs',
           collapsible: true,
           children: ['/node/node.md']
+        },
+        {
+          text: 'api开发',
+          collapsible: true,
+          children: ['/node/api_serve.md']
         }
       ],
       '/project/': [
