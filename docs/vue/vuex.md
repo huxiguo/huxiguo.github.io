@@ -5,6 +5,38 @@ title: Vuex
 
 # Vuex
 
+在 Vue 中实现集中式状态管理的插件
+
+## 工作原理
+
+![vuex](./images/vuex.png)
+
+## 使用 Vuex
+
+```js
+// 安装 Vuex
+npm i vuex
+
+// Vue2使用vuex3，Vue3使用Vuex4
+
+// 创建vm实例时 store
+new Vue({
+  render: (h) => h(App),
+  store
+}).$mount('#app')
+
+// store index.js
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+// 使用
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+  // ...
+})
+```
+
 ## 1. State
 
 - State 提供唯一的公共数据源，所有共享的数据都要统一放到 Store 的 State 中进行储存
@@ -32,8 +64,9 @@ export default new Vuex.Store({
     // 1. 从vuex中导入mapState 函数
     import {mapState} from 'vuex'
     // 通过导入的函数将组件需要的数据，映射为当前组件的computed计算属性
-    comouted: {
-      ...mapState(['count'])
+    computed: {
+      ...mapState(['count']) // 数组写法
+      ...mapState({sum:'count'}) // 对象写法
     }
     ```
 

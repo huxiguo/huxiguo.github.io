@@ -9,6 +9,8 @@ title: Vue
 
 ## [组件通信](communication.md)
 
+## [跨域代理](proxy.md)
+
 ## [vuex](vuex.md)
 
 ## [vue cli](Vue_cli.md)

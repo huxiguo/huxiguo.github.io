@@ -566,3 +566,51 @@ export default {
 }
 </script>
 ```
+
+## 插槽
+
+1. 默认插槽
+
+```vue
+// 父组件
+<template>
+  <Student>
+    <h2>world</h2>
+  </Student>
+</template>
+
+// Student
+<template>
+  <h1>hello</h1>
+  <slot>默认值，没有传递结构时使用</slot>
+</template>
+```
+
+2. 具名插槽
+
+```vue
+// 父组件
+<template>
+  <Student>
+    <h2 slot="center">world</h2>
+    <template v-slot:footer>
+      <h2>hahah</h2>
+      <h2>hahah</h2>
+      <h2>hahah</h2>
+    </template>
+  </Student>
+</template>
+
+// Student
+<template>
+  <h1>hello</h1>
+  <slot name="center">默认值，没有传递结构时使用1</slot>
+  <slot name="footer">默认值，没有传递结构时使用2</slot>
+</template>
+```
+
+3. 作用域插槽
+
+结构必须使用 `<template></template>`包裹
+
+`<template scope="xxx"></template>`
