@@ -156,3 +156,132 @@ export default new Vuex.Store({
   	...mapGetters(['showNum'])
   }
   ```
+
+## map 方法
+
+1.  `mapState`方法：用于帮助我们映射 state 中的数据为计算属性
+
+```js
+import {mapState} from 'vuex'
+
+computed:{
+  // 借助mapState生成计算属性，从state中读取数据。（对象写法）
+  ...mapState({sum:'sum',school:'school',subject:'subject'}),
+
+  // 借助mapState生成计算属性，从state中读取数据。（数组写法）
+  ...mapState(['sum','school','subject']),
+},
+```
+
+2.  `mapGetters`方法：用于帮助我们映射 getters 中的数据为计算属性
+
+```js
+import {mapGetters} from 'vuex'
+
+computed:{
+  // 借助mapGetters生成计算属性，从getters中读取数据。（对象写法）
+  ...mapGetters({bigSum:'bigSum'}),
+
+  // 借助mapGetters生成计算属性，从getters中读取数据。（数组写法）
+  ...mapGetters(['bigSum'])
+},
+```
+
+3. `mapActions` 方法：用于帮助我们生成与 actions 对话的方法，即：包含$store.dispatch(xxx)的函数。
+
+```js
+import {mapActions} from 'vuex'
+methods：{
+  // 借助mapActions生成对应的方法，方法中会调用commit去练习mutations（对象写法）
+  ...mapActions({incrementOdd:'jiaOdd',incrementWait:'jiaWait'}),
+
+  // 借助mapActions生成对应的方法，方法中会调用commit去练习mutations（数组写法）
+  ...mapActions(['jiaOdd','jiaWait']),
+}
+```
+
+4. `mapMutations`方法：用于帮助我们生成与 mutations 对话的方法，即：包含$store.commit(xxx)的函数。
+
+```js
+methods：{
+  // 借助mapMutations生成对应的方法，方法中会调用commit去练习mutations（对象写法）
+  ...mapMutations({increment:'JIA',decrement:'JIAN'}),
+
+  // 借助mapMutations生成对应的方法，方法中会调用commit去练习mutations（数组写法）
+  ...mapMutations(['JIA','JIAN']),
+}
+```
+
+::: tip 提示
+`mapActions` 与 `mapMutations` 使用时，若需要传递参数，需要：在模板中绑定事件时传递好参数，否则参数是事件对象
+:::
+
+## 模块化 命名空间
+
+让代码更好维护，让多种数据分析更加明确。
+
+```js
+// store index.js
+
+const countAbout = {
+    namespaced:true,//开启命名空间
+    state:{x:1},
+    mutations:{......},
+    actions:{......},
+    getters:{
+        bigSum(state){
+            return state.sum*10
+        }
+    }
+}
+
+const personAbout = {
+    namespaced:true,//开启命名空间
+    state:{......},
+    mutations:{......},
+    actions:{......}
+}
+
+const store = new Vuex.Store({
+    modules:{
+        countAbout,
+        personAbout
+    }
+})
+```
+
+1. 开启命名空间后，组件中读取 state 数据：
+
+```js
+//方式一：自己直接读取
+this.$store.state.personAbout.list
+//方式二：借助mapState读取
+...mapState('countAbout',['sum','school','subject']),
+```
+
+2. 开启命名空间后，组件中读取 getters 数据：
+
+```js
+//方式一：自己直接读取
+this.$store.getters['personAbout/firstPersonName']
+//方式二：借助mapGetters读取
+...mapGetters('countAbout',['bigSum'])
+```
+
+3. 开启命名空间后，组件中调用 dispatch：
+
+```js
+//方式一：自己直接读取
+this.$store.dispatch('personAbout/addPersonWang',personObj)
+//方式二：借助mapGetters读取
+...mapActions('countAbout',{incrementOdd:'jiaOdd',incrementWait:'jiaWait'}),
+```
+
+4. 开启命名空间后，组件中调用 commit：
+
+```js
+//方式一：自己直接读取
+this.$store.commit('personAbout/ADD_PERSON',personObj)
+//方式二：借助mapGetters读取
+...mapMutations('countAbout',{increment:'JIA',decrement:'JIAN'}),
+```

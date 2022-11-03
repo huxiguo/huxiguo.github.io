@@ -160,7 +160,9 @@ export default {
             '/vue/vue2.md',
             '/vue/communication.md',
             '/vue/proxy.md',
-            '/vue/vuex.md'
+            '/vue/vuex.md',
+            '/vue/vueRouter.md',
+            '/vue/VRouter.md',
           ]
         },
         {

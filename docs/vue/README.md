@@ -13,4 +13,8 @@ title: Vue
 
 ## [vuex](vuex.md)
 
+## [vueRouter 简](vueRouter.md)
+
+## [vueRouter 详](VRouter.md)
+
 ## [vue cli](Vue_cli.md)
