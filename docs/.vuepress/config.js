@@ -41,7 +41,7 @@ export default {
         {
           text: '工程化',
           collapsible: true,
-          children: ['/project/README.md']
+          children: ['/Webpack/README.md']
         },
         {
           text: 'Vue',
@@ -162,7 +162,7 @@ export default {
             '/vue/proxy.md',
             '/vue/vuex.md',
             '/vue/vueRouter.md',
-            '/vue/VRouter.md',
+            '/vue/VRouter.md'
           ]
         },
         {
@@ -249,11 +249,36 @@ export default {
           children: ['/node/api_serve.md']
         }
       ],
-      '/project/': [
+      '/Webpack/': [
         {
-          text: '工程化',
+          text: '基础',
           collapsible: true,
-          children: ['/project/project.md']
+          children: [
+            '/Webpack/base/README.md',
+            '/Webpack/base/base.md',
+            '/Webpack/base/config.md',
+            '/Webpack/base/development.md',
+            '/Webpack/base/css.md',
+            '/Webpack/base/image.md',
+            '/Webpack/base/output.md',
+            '/Webpack/base/clean.md',
+            '/Webpack/base/font.md',
+            '/Webpack/base/javascript.md',
+            '/Webpack/base/html.md',
+            '/Webpack/base/serve.md',
+            '/Webpack/base/production.md',
+            '/Webpack/base/optimizeCss.md',
+          ]
+        },
+        {
+          text: '高级',
+          collapsible: true,
+          children: ['/Webpack/senior/README.md']
+        },
+        {
+          text: '项目',
+          collapsible: true,
+          children: ['/Webpack/project/README.md']
         }
       ]
     },
