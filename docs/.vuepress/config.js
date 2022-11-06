@@ -267,18 +267,25 @@ export default {
             '/Webpack/base/html.md',
             '/Webpack/base/serve.md',
             '/Webpack/base/production.md',
-            '/Webpack/base/optimizeCss.md',
+            '/Webpack/base/optimizeCss.md'
           ]
         },
         {
           text: '高级',
           collapsible: true,
-          children: ['/Webpack/senior/README.md']
+          children: [
+            '/Webpack/senior/README.md',
+            '/Webpack/senior/enhanceExperience.md',
+            '/Webpack/senior/liftingSpeed.md',
+            '/Webpack/senior/reduceVolume.md',
+            '/Webpack/senior/optimizePerformance.md',
+            '/Webpack/senior/summary.md'
+          ]
         },
         {
           text: '项目',
           collapsible: true,
-          children: ['/Webpack/project/README.md']
+          children: ['/Webpack/project/README.md','/Webpack/project/vue-cli.md']
         }
       ]
     },
