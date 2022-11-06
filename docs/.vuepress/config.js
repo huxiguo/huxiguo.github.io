@@ -166,9 +166,24 @@ export default {
           ]
         },
         {
+          text: 'Vue3',
+          collapsible: true,
+          children: [
+            '/vue/vue3/README.md',
+            '/vue/vue3/create.md',
+            '/vue/vue3/analyze.md',
+            '/vue/vue3/composition.md'
+          ]
+        },
+        {
           text: 'Vue Cli指令',
           collapsible: true,
           children: ['/vue/Vue_cli.md']
+        },
+        {
+          text: 'Vite',
+          collapsible: true,
+          children: ['/vue/vite/README.md']
         }
       ],
       '/React/': [
@@ -285,7 +300,10 @@ export default {
         {
           text: '项目',
           collapsible: true,
-          children: ['/Webpack/project/README.md','/Webpack/project/vue-cli.md']
+          children: [
+            '/Webpack/project/README.md',
+            '/Webpack/project/vue-cli.md'
+          ]
         }
       ]
     },
