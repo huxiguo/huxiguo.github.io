@@ -46,7 +46,7 @@ export default {
         {
           text: 'Vue',
           collapsible: true,
-          children: ['/Vue/README.md']
+          children: ['/Vue/README.md', '/Vue/source/README.md']
         },
         {
           text: 'React',
@@ -184,6 +184,11 @@ export default {
           text: 'Vite',
           collapsible: true,
           children: ['/vue/vite/README.md']
+        },
+        {
+          text: 'Vue源码',
+          collapsible: true,
+          children: ['/vue/source/README.md']
         }
       ],
       '/React/': [
@@ -191,15 +196,25 @@ export default {
           text: 'React入门',
           collapsible: true,
           children: [
-            '/React/accidence.md',
-            '/React/jsx.md',
-            '/React/commponet.md',
-            '/React/event.md',
-            '/React/state.md',
-            '/React/Props.md',
-            '/React/Refs.md',
-            '/React/active.md'
+            '/React/base/accidence.md',
+            '/React/base/jsx.md',
+            '/React/base/commponet.md',
+            '/React/base/event.md',
+            '/React/base/state.md',
+            '/React/base/Props.md',
+            '/React/base/Refs.md',
+            '/React/base/active.md'
           ]
+        },
+        {
+          text: 'router',
+          collapsible: true,
+          children: ['/React/router/README.md']
+        },
+        {
+          text: 'redux',
+          collapsible: true,
+          children: ['/React/redux/README.md']
         }
       ],
       '/Git/': [
