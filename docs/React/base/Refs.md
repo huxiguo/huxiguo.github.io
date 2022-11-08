@@ -53,6 +53,8 @@ class MyInput extends React.Component {
 
 `React.createRef()`调用后返回一个容器，可以存储被 ref 标识的结点
 
+专人专用
+
 ```js
   input1Ref = React.createRef()
 

@@ -87,3 +87,13 @@ class State1 extends React.Component {
 }
 b
 ```
+
+## :red_square: 总结
+
+1. state 是组件最重要的属性，值是对象
+2. 通过更新组件的 state，更新页面显示
+3. 组件中的 render 方法的 `this` 为组件的实例对象
+4. 组件自定义方法的`this`为`undefined`
+   - 通过`bind`改变`this`绑定
+   - 使用箭头函数
+5. 修改数据使用`setState`
