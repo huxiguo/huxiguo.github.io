@@ -207,9 +207,19 @@ export default {
           ]
         },
         {
+          text: 'React 中的 Ajax',
+          collapsible: true,
+          children: ['/React/ajax/README.md','/React/ajax/axios.md','/React/ajax/proxy.md']
+        },
+        {
+          text: '消息订阅与发布',
+          collapsible: true,
+          children: ['/React/pubSub/README.md']
+        },
+        {
           text: 'router',
           collapsible: true,
-          children: ['/React/router/README.md']
+          children: ['/React/router/README.md','/React/router/v5.md','/React/router/v6.md']
         },
         {
           text: 'redux',
