@@ -59,6 +59,11 @@ export default {
           children: ['/node/README.md']
         },
         {
+          text: '工具集合',
+          collapsible: true,
+          children: ['/utils/README.md']
+        },
+        {
           text: '指令',
           collapsible: true,
           children: ['/command/README.md']
@@ -124,7 +129,8 @@ export default {
             '/guide/Prototype.md',
             '/guide/Destructuring.md',
             '/guide/Object.md',
-            '/guide/Array.md'
+            '/guide/Array.md',
+            '/guide/Promise.md',
           ]
         }
       ],
@@ -150,6 +156,11 @@ export default {
           text: '类型声明文件',
           collapsible: true,
           children: ['/TypeScript/typeFile.md']
+        },
+        {
+          text: '编译配置文件',
+          collapsible: true,
+          children: ['/TypeScript/config.md']
         }
       ],
       '/vue': [
@@ -276,6 +287,33 @@ export default {
           collapsible: true,
           children: ['/js/js.md']
         }
+      ],
+      '/utils/': [
+        {
+          text: 'javascript',
+          collapsible: true,
+          children: ['/utils/js/README.md']
+        },
+        {
+          text: 'css',
+          collapsible: true,
+          children: ['/utils/css/README.md']
+        },
+        {
+          text: '编程工具',
+          collapsible: true,
+          children: ['/utils/codeDools/README.md']
+        },
+        {
+          text: 'vue',
+          collapsible: true,
+          children: ['/utils/vue/README.md']
+        },
+        {
+          text: '后端',
+          collapsible: true,
+          children: ['/utils/rear/README.md']
+        },
       ],
       '/node/': [
         {
