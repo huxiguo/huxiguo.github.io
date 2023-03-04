@@ -39,9 +39,14 @@ export default {
           children: ['/TypeScript/README.md']
         },
         {
+          text: 'python',
+          collapsible: true,
+          children: ['/python/README.md']
+        },
+        {
           text: '工程化',
           collapsible: true,
-          children: ['/Webpack/README.md']
+          children: ['/project/Webpack/README.md', '/project/Vite/README.md']
         },
         {
           text: 'Vue',
@@ -130,7 +135,7 @@ export default {
             '/guide/Destructuring.md',
             '/guide/Object.md',
             '/guide/Array.md',
-            '/guide/Promise.md',
+            '/guide/Promise.md'
           ]
         }
       ],
@@ -220,7 +225,11 @@ export default {
         {
           text: 'React 中的 Ajax',
           collapsible: true,
-          children: ['/React/ajax/README.md','/React/ajax/axios.md','/React/ajax/proxy.md']
+          children: [
+            '/React/ajax/README.md',
+            '/React/ajax/axios.md',
+            '/React/ajax/proxy.md'
+          ]
         },
         {
           text: '消息订阅与发布',
@@ -230,7 +239,11 @@ export default {
         {
           text: 'router',
           collapsible: true,
-          children: ['/React/router/README.md','/React/router/v5.md','/React/router/v6.md']
+          children: [
+            '/React/router/README.md',
+            '/React/router/v5.md',
+            '/React/router/v6.md'
+          ]
         },
         {
           text: 'redux',
@@ -313,7 +326,7 @@ export default {
           text: '后端',
           collapsible: true,
           children: ['/utils/rear/README.md']
-        },
+        }
       ],
       '/node/': [
         {
@@ -327,45 +340,71 @@ export default {
           children: ['/node/api_serve.md']
         }
       ],
-      '/Webpack/': [
+      '/project/Webpack/': [
         {
           text: '基础',
           collapsible: true,
           children: [
-            '/Webpack/base/README.md',
-            '/Webpack/base/base.md',
-            '/Webpack/base/config.md',
-            '/Webpack/base/development.md',
-            '/Webpack/base/css.md',
-            '/Webpack/base/image.md',
-            '/Webpack/base/output.md',
-            '/Webpack/base/clean.md',
-            '/Webpack/base/font.md',
-            '/Webpack/base/javascript.md',
-            '/Webpack/base/html.md',
-            '/Webpack/base/serve.md',
-            '/Webpack/base/production.md',
-            '/Webpack/base/optimizeCss.md'
+            '/project/Webpack/base/README.md',
+            '/project/Webpack/base/base.md',
+            '/project/Webpack/base/config.md',
+            '/project/Webpack/base/development.md',
+            '/project/Webpack/base/css.md',
+            '/project/Webpack/base/image.md',
+            '/project/Webpack/base/output.md',
+            '/project/Webpack/base/clean.md',
+            '/project/Webpack/base/font.md',
+            '/project/Webpack/base/javascript.md',
+            '/project/Webpack/base/html.md',
+            '/project/Webpack/base/serve.md',
+            '/project/Webpack/base/production.md',
+            '/project/Webpack/base/optimizeCss.md'
           ]
         },
         {
           text: '高级',
           collapsible: true,
           children: [
-            '/Webpack/senior/README.md',
-            '/Webpack/senior/enhanceExperience.md',
-            '/Webpack/senior/liftingSpeed.md',
-            '/Webpack/senior/reduceVolume.md',
-            '/Webpack/senior/optimizePerformance.md',
-            '/Webpack/senior/summary.md'
+            '/project/Webpack/senior/README.md',
+            '/project/Webpack/senior/enhanceExperience.md',
+            '/project/Webpack/senior/liftingSpeed.md',
+            '/project/Webpack/senior/reduceVolume.md',
+            '/project/Webpack/senior/optimizePerformance.md',
+            '/project/Webpack/senior/summary.md'
           ]
         },
         {
           text: '项目',
           collapsible: true,
           children: [
-            '/Webpack/project/README.md',
-            '/Webpack/project/vue-cli.md'
+            '/project/Webpack/project/README.md',
+            '/project/Webpack/project/vue-cli.md'
+          ]
+        }
+      ],
+      '/project/Vite/': [
+        {
+          text: '构建工具',
+          collapsible: true,
+          children: ['/project/Vite/BuildTools/README.md']
+        },
+        {
+          text: 'Vite VS webpack',
+          collapsible: true,
+          children: ['/project/Vite/Compare/README.md']
+        }
+      ],
+      '/python/base/': [
+        {
+          text: '基础',
+          collapsible: true,
+          children: [
+            '/python/base/README.md',
+            '/python/base/func.md',
+            '/python/base/list.md',
+            '/python/base/str.md',
+            '/python/base/tuple.md',
+            '/python/base/set.md'
           ]
         }
       ]
@@ -374,5 +413,5 @@ export default {
     lastUpdatedText: '最近更新',
     contributors: true,
     contributorsText: '贡献者'
-  })
+  }),
 }
