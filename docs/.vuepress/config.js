@@ -402,9 +402,12 @@ export default {
             '/python/base/README.md',
             '/python/base/func.md',
             '/python/base/list.md',
-            '/python/base/str.md',
             '/python/base/tuple.md',
-            '/python/base/set.md'
+            '/python/base/str.md',
+            '/python/base/slice.md',
+            '/python/base/set.md',
+            '/python/base/dict.md',
+            '/python/base/file.md',
           ]
         }
       ]
