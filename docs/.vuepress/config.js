@@ -19,6 +19,11 @@ export default {
     sidebar: {
       '/': [
         {
+          text: '面试题',
+          collapsible: true,
+          children: ['/interview/README.md']
+        },
+        {
           text: 'CSS',
           collapsible: true,
           children: ['/CSS/README.md']
@@ -397,7 +402,7 @@ export default {
       '/python/base/': [
         {
           text: '基础',
-          collapsible: true,
+          // collapsible: true,
           children: [
             '/python/base/README.md',
             '/python/base/func.md',
@@ -408,6 +413,348 @@ export default {
             '/python/base/set.md',
             '/python/base/dict.md',
             '/python/base/file.md',
+            '/python/base/module.md'
+          ]
+        }
+      ],
+      '/python/project/': [
+        {
+          text: '数据可视化',
+          // collapsible: true,
+          children: ['/python/project/README.md']
+        }
+      ],
+      '/python/object/': [
+        {
+          text: '面向对象',
+          // collapsible: true,
+          children: ['/python/object/README.md']
+        }
+      ],
+      '/interview/': [
+        // vue
+        {
+          text: 'Vue系列',
+          collapsable: false,
+          children: [
+            '/interview/vue/vue',
+            '/interview/vue/spa',
+            '/interview/vue/show_if',
+            '/interview/vue/new_vue',
+            '/interview/vue/lifecycle',
+            '/interview/vue/if_for',
+            '/interview/vue/first_page_time',
+            '/interview/vue/data',
+            '/interview/vue/data_object_add_attrs',
+            '/interview/vue/components_plugin',
+            '/interview/vue/communication',
+            '/interview/vue/bind',
+            '/interview/vue/nexttick',
+            '/interview/vue/mixin',
+            '/interview/vue/slot',
+            '/interview/vue/observable',
+            '/interview/vue/key',
+            '/interview/vue/keepalive',
+            '/interview/vue/modifier',
+            '/interview/vue/directive',
+            '/interview/vue/filter',
+            '/interview/vue/vnode',
+            '/interview/vue/diff',
+            '/interview/vue/axios',
+            '/interview/vue/axiosCode',
+            '/interview/vue/ssr',
+            '/interview/vue/structure',
+            '/interview/vue/permission',
+            '/interview/vue/cors',
+            '/interview/vue/404',
+            '/interview/vue/error',
+            '/interview/vue/vue3_vue2'
+          ]
+        },
+        // vue3
+        {
+          text: 'Vue3系列',
+          collapsable: true,
+          children: [
+            'vue3/goal.md',
+            '/interview/vue3/performance',
+            '/interview/vue3/proxy',
+            '/interview/vue3/composition',
+            '/interview/vue3/treeshaking',
+            '/interview/vue3/modal_component'
+          ]
+        },
+        // ES6
+        {
+          text: 'ES6系列',
+          collapsable: true,
+          children: [
+            '/interview/es6/var_let_const',
+            '/interview/es6/array',
+            '/interview/es6/object',
+            '/interview/es6/function',
+            '/interview/es6/set_map',
+            '/interview/es6/promise',
+            '/interview/es6/generator',
+            '/interview/es6/proxy',
+            '/interview/es6/module',
+            '/interview/es6/decorator'
+          ]
+        },
+        // JavaScript
+        {
+          text: 'JavaScript系列',
+          collapsable: true,
+          children: [
+            '/interview/JavaScript/data_type',
+            '/interview/JavaScript/array_api',
+            '/interview/JavaScript/string_api',
+            '/interview/JavaScript/type_conversion',
+            '/interview/JavaScript/== _===',
+            '/interview/JavaScript/copy',
+            '/interview/JavaScript/closure',
+            '/interview/JavaScript/scope',
+            '/interview/JavaScript/prototype',
+            '/interview/JavaScript/inherit',
+            '/interview/JavaScript/this',
+            '/interview/JavaScript/context_stack',
+            '/interview/JavaScript/event_Model',
+            '/interview/JavaScript/typeof_instanceof',
+            '/interview/JavaScript/event_agent',
+            '/interview/JavaScript/new',
+            '/interview/JavaScript/ajax',
+            '/interview/JavaScript/bind_call_apply',
+            '/interview/JavaScript/regexp',
+            '/interview/JavaScript/event_loop',
+            '/interview/JavaScript/Dom',
+            '/interview/JavaScript/BOM',
+            '/interview/JavaScript/tail_recursion',
+            '/interview/JavaScript/memory_leak',
+            '/interview/JavaScript/cache',
+            '/interview/JavaScript/functional_programming',
+            '/interview/JavaScript/function_cache',
+            '/interview/JavaScript/loss_accuracy',
+            '/interview/JavaScript/debounce_throttle',
+            '/interview/JavaScript/visible',
+            '/interview/JavaScript/continue_to_upload',
+            '/interview/JavaScript/pull_up_loading_pull_down_refresh',
+            '/interview/JavaScript/single_sign',
+            '/interview/JavaScript/security'
+          ]
+        },
+        // CSS
+        {
+          text: 'CSS系列',
+          collapsable: true,
+          children: [
+            '/interview/css/box',
+            '/interview/css/selector',
+            '/interview/css/em_px_rem_vh_vw',
+            '/interview/css/dp_px_dpr_ppi',
+            '/interview/css/hide_attributes',
+            '/interview/css/BFC',
+            '/interview/css/center',
+            '/interview/css/column_layout',
+            '/interview/css/flexbox',
+            '/interview/css/grid',
+            '/interview/css/css3_features',
+            '/interview/css/animation',
+            '/interview/css/layout_painting',
+            '/interview/css/responsive_layout',
+            '/interview/css/css_performance',
+            '/interview/css/single_multi_line',
+            '/interview/css/visual_scrolling',
+            '/interview/css/triangle',
+            '/interview/css/less_12px',
+            '/interview/css/sass_less_stylus'
+          ]
+        },
+        // Webpack
+        {
+          text: 'Webpack系列',
+          collapsable: true,
+          children: [
+            '/interview/webpack/webpack',
+            '/interview/webpack/build_process',
+            '/interview/webpack/Loader',
+            '/interview/webpack/Plugin',
+            '/interview/webpack/Loader_Plugin',
+            '/interview/webpack/HMR',
+            '/interview/webpack/proxy',
+            '/interview/webpack/performance',
+            '/interview/webpack/improve_build',
+            '/interview/webpack/Rollup_Parcel_snowpack_Vite'
+          ]
+        },
+        // HTTP
+        {
+          text: 'HTTP系列',
+          collapsable: true,
+          children: [
+            '/interview/http/HTTP_HTTPS',
+            '/interview/http/HTTPS',
+            '/interview/http/UDP_TCP',
+            '/interview/http/OSI',
+            '/interview/http/TCP_IP',
+            '/interview/http/DNS',
+            '/interview/http/CDN',
+            '/interview/http/1.0_1.1_2.0',
+            '/interview/http/status',
+            '/interview/http/GET_POST',
+            '/interview/http/headers',
+            '/interview/http/after_url',
+            '/interview/http/handshakes_waves',
+            '/interview/http/WebSocket'
+          ]
+        },
+        // NodeJS
+        {
+          text: 'NodeJS系列',
+          collapsable: true,
+          children: [
+            '/interview/NodeJS/nodejs',
+            '/interview/NodeJS/global',
+            '/interview/NodeJS/process',
+            '/interview/NodeJS/fs',
+            '/interview/NodeJS/Buffer',
+            '/interview/NodeJS/Stream',
+            '/interview/NodeJS/EventEmitter',
+            '/interview/NodeJS/event_loop',
+            '/interview/NodeJS/require_order',
+            '/interview/NodeJS/middleware',
+            '/interview/NodeJS/jwt',
+            '/interview/NodeJS/file_upload',
+            '/interview/NodeJS/paging',
+            '/interview/NodeJS/performance'
+          ]
+        },
+        // React
+        {
+          text: 'React系列',
+          collapsable: true,
+          children: [
+            '/interview/React/React',
+            '/interview/React/Real DOM_Virtual DOM',
+            '/interview/React/life cycle',
+            '/interview/React/state_props',
+            '/interview/React/super()_super(props)',
+            '/interview/React/setState',
+            '/interview/React/SyntheticEvent',
+            '/interview/React/Binding events',
+            '/interview/React/Building components',
+            '/interview/React/communication',
+            '/interview/React/key',
+            '/interview/React/React refs',
+            '/interview/React/class_function component',
+            '/interview/React/controlled_Uncontrolled',
+            '/interview/React/High order components',
+            '/interview/React/React Hooks',
+            '/interview/React/import css',
+            '/interview/React/animation',
+            '/interview/React/redux',
+            '/interview/React/Redux Middleware',
+            '/interview/React/how to use redux',
+            '/interview/React/React Router',
+            '/interview/React/React Router model',
+            '/interview/React/immutable',
+            '/interview/React/render',
+            '/interview/React/improve_render',
+            '/interview/React/diff',
+            '/interview/React/Fiber',
+            '/interview/React/JSX to DOM',
+            '/interview/React/Improve performance',
+            '/interview/React/capture error',
+            '/interview/React/server side rendering',
+            '/interview/React/summary'
+          ]
+        },
+        // Git
+        {
+          text: '版本控制系列',
+          collapsable: true,
+          children: [
+            '/interview/git/Version control',
+            '/interview/git/Git',
+            '/interview/git/fork_clone_branch',
+            '/interview/git/command',
+            '/interview/git/HEAD_tree_index',
+            '/interview/git/git pull _git fetch',
+            '/interview/git/git stash',
+            '/interview/git/git rebase_ git merge',
+            '/interview/git/conflict',
+            '/interview/git/git reset_ git revert'
+          ]
+        },
+        // TypeScript
+        {
+          text: 'TypeScript 系列',
+          collapsable: true,
+          children: [
+            '/interview/typescript/typescript_javascript',
+            '/interview/typescript/data_type',
+            '/interview/typescript/enum',
+            '/interview/typescript/interface',
+            '/interview/typescript/class',
+            '/interview/typescript/function',
+            '/interview/typescript/generic',
+            '/interview/typescript/high type',
+            '/interview/typescript/decorator',
+            '/interview/typescript/namespace_module',
+            '/interview/typescript/react',
+            '/interview/typescript/vue'
+          ]
+        },
+        // 算法数据解构
+        {
+          text: '算法与数据结构系列',
+          collapsable: true,
+          children: [
+            '/interview/algorithm/Algorithm',
+            '/interview/algorithm/time_space',
+            '/interview/algorithm/structure',
+            '/interview/algorithm/stack_queue',
+            '/interview/algorithm/Linked List',
+            '/interview/algorithm/set',
+            '/interview/algorithm/tree',
+            '/interview/algorithm/Heap',
+            '/interview/algorithm/graph',
+            '/interview/algorithm/sort',
+            '/interview/algorithm/bubbleSort',
+            '/interview/algorithm/selectionSort',
+            '/interview/algorithm/insertionSort',
+            '/interview/algorithm/mergeSort',
+            '/interview/algorithm/quickSort',
+            '/interview/algorithm/BinarySearch',
+            '/interview/algorithm/design1',
+            '/interview/algorithm/design2'
+          ]
+        },
+        // weApp
+        {
+          text: '小程序系列',
+          collapsable: true,
+          children: [
+            '/interview/applet/applet',
+            '/interview/applet/lifecycle',
+            '/interview/applet/navigate',
+            '/interview/applet/optimization',
+            '/interview/applet/login',
+            '/interview/applet/publish',
+            '/interview/applet/requestPayment',
+            '/interview/applet/WebView_jscore'
+          ]
+        },
+        // 设计模式
+        {
+          text: '设计模式系列',
+          collapsable: true,
+          children: [
+            '/interview/design/design',
+            '/interview/design/Singleton Pattern',
+            '/interview/design/Factory  Pattern',
+            '/interview/design/Strategy Pattern',
+            '/interview/design/Proxy Pattern',
+            '/interview/design/Observer  Pattern'
           ]
         }
       ]
@@ -416,5 +763,5 @@ export default {
     lastUpdatedText: '最近更新',
     contributors: true,
     contributorsText: '贡献者'
-  }),
+  })
 }
