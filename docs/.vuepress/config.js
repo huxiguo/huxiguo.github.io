@@ -69,6 +69,11 @@ export default {
           children: ['/node/README.md']
         },
         {
+          text: 'SSR',
+          collapsible: true,
+          children: ['/SSR/README.md']
+        },
+        {
           text: '工具集合',
           collapsible: true,
           children: ['/utils/README.md']
@@ -134,14 +139,7 @@ export default {
         {
           text: 'ES6',
           collapsible: true,
-          children: [
-            '/guide/Symbol.md',
-            '/guide/Prototype.md',
-            '/guide/Destructuring.md',
-            '/guide/Object.md',
-            '/guide/Array.md',
-            '/guide/Promise.md'
-          ]
+          children: ['/guide/Symbol.md', '/guide/Prototype.md', '/guide/Destructuring.md', '/guide/Object.md', '/guide/Array.md', '/guide/Promise.md']
         }
       ],
       '/register/': [
@@ -177,24 +175,12 @@ export default {
         {
           text: 'Vue',
           collapsible: true,
-          children: [
-            '/vue/vue2.md',
-            '/vue/communication.md',
-            '/vue/proxy.md',
-            '/vue/vuex.md',
-            '/vue/vueRouter.md',
-            '/vue/VRouter.md'
-          ]
+          children: ['/vue/vue2.md', '/vue/communication.md', '/vue/proxy.md', '/vue/vuex.md', '/vue/vueRouter.md', '/vue/VRouter.md']
         },
         {
           text: 'Vue3',
           collapsible: true,
-          children: [
-            '/vue/vue3/README.md',
-            '/vue/vue3/create.md',
-            '/vue/vue3/analyze.md',
-            '/vue/vue3/composition.md'
-          ]
+          children: ['/vue/vue3/README.md', '/vue/vue3/create.md', '/vue/vue3/analyze.md', '/vue/vue3/composition.md']
         },
         {
           text: 'Vue Cli指令',
@@ -216,25 +202,12 @@ export default {
         {
           text: 'React入门',
           collapsible: true,
-          children: [
-            '/React/base/accidence.md',
-            '/React/base/jsx.md',
-            '/React/base/commponet.md',
-            '/React/base/event.md',
-            '/React/base/state.md',
-            '/React/base/Props.md',
-            '/React/base/Refs.md',
-            '/React/base/active.md'
-          ]
+          children: ['/React/base/accidence.md', '/React/base/jsx.md', '/React/base/commponet.md', '/React/base/event.md', '/React/base/state.md', '/React/base/Props.md', '/React/base/Refs.md', '/React/base/active.md']
         },
         {
           text: 'React 中的 Ajax',
           collapsible: true,
-          children: [
-            '/React/ajax/README.md',
-            '/React/ajax/axios.md',
-            '/React/ajax/proxy.md'
-          ]
+          children: ['/React/ajax/README.md', '/React/ajax/axios.md', '/React/ajax/proxy.md']
         },
         {
           text: '消息订阅与发布',
@@ -244,11 +217,7 @@ export default {
         {
           text: 'router',
           collapsible: true,
-          children: [
-            '/React/router/README.md',
-            '/React/router/v5.md',
-            '/React/router/v6.md'
-          ]
+          children: ['/React/router/README.md', '/React/router/v5.md', '/React/router/v6.md']
         },
         {
           text: 'redux',
@@ -369,22 +338,12 @@ export default {
         {
           text: '高级',
           collapsible: true,
-          children: [
-            '/project/Webpack/senior/README.md',
-            '/project/Webpack/senior/enhanceExperience.md',
-            '/project/Webpack/senior/liftingSpeed.md',
-            '/project/Webpack/senior/reduceVolume.md',
-            '/project/Webpack/senior/optimizePerformance.md',
-            '/project/Webpack/senior/summary.md'
-          ]
+          children: ['/project/Webpack/senior/README.md', '/project/Webpack/senior/enhanceExperience.md', '/project/Webpack/senior/liftingSpeed.md', '/project/Webpack/senior/reduceVolume.md', '/project/Webpack/senior/optimizePerformance.md', '/project/Webpack/senior/summary.md']
         },
         {
           text: '项目',
           collapsible: true,
-          children: [
-            '/project/Webpack/project/README.md',
-            '/project/Webpack/project/vue-cli.md'
-          ]
+          children: ['/project/Webpack/project/README.md', '/project/Webpack/project/vue-cli.md']
         }
       ],
       '/project/Vite/': [
@@ -403,18 +362,7 @@ export default {
         {
           text: '基础',
           // collapsible: true,
-          children: [
-            '/python/base/README.md',
-            '/python/base/func.md',
-            '/python/base/list.md',
-            '/python/base/tuple.md',
-            '/python/base/str.md',
-            '/python/base/slice.md',
-            '/python/base/set.md',
-            '/python/base/dict.md',
-            '/python/base/file.md',
-            '/python/base/module.md'
-          ]
+          children: ['/python/base/README.md', '/python/base/func.md', '/python/base/list.md', '/python/base/tuple.md', '/python/base/str.md', '/python/base/slice.md', '/python/base/set.md', '/python/base/dict.md', '/python/base/file.md', '/python/base/module.md']
         }
       ],
       '/python/project/': [
@@ -475,31 +423,13 @@ export default {
         {
           text: 'Vue3系列',
           collapsable: true,
-          children: [
-            'vue3/goal.md',
-            '/interview/vue3/performance',
-            '/interview/vue3/proxy',
-            '/interview/vue3/composition',
-            '/interview/vue3/treeshaking',
-            '/interview/vue3/modal_component'
-          ]
+          children: ['/interview/vue3/goal.md', '/interview/vue3/performance', '/interview/vue3/proxy', '/interview/vue3/composition', '/interview/vue3/treeshaking', '/interview/vue3/modal_component']
         },
         // ES6
         {
           text: 'ES6系列',
           collapsable: true,
-          children: [
-            '/interview/es6/var_let_const',
-            '/interview/es6/array',
-            '/interview/es6/object',
-            '/interview/es6/function',
-            '/interview/es6/set_map',
-            '/interview/es6/promise',
-            '/interview/es6/generator',
-            '/interview/es6/proxy',
-            '/interview/es6/module',
-            '/interview/es6/decorator'
-          ]
+          children: ['/interview/es6/var_let_const', '/interview/es6/array', '/interview/es6/object', '/interview/es6/function', '/interview/es6/set_map', '/interview/es6/promise', '/interview/es6/generator', '/interview/es6/proxy', '/interview/es6/module', '/interview/es6/decorator']
         },
         // JavaScript
         {
@@ -733,29 +663,47 @@ export default {
         {
           text: '小程序系列',
           collapsable: true,
-          children: [
-            '/interview/applet/applet',
-            '/interview/applet/lifecycle',
-            '/interview/applet/navigate',
-            '/interview/applet/optimization',
-            '/interview/applet/login',
-            '/interview/applet/publish',
-            '/interview/applet/requestPayment',
-            '/interview/applet/WebView_jscore'
-          ]
+          children: ['/interview/applet/applet', '/interview/applet/lifecycle', '/interview/applet/navigate', '/interview/applet/optimization', '/interview/applet/login', '/interview/applet/publish', '/interview/applet/requestPayment', '/interview/applet/WebView_jscore']
         },
         // 设计模式
         {
           text: '设计模式系列',
           collapsable: true,
+          children: ['/interview/design/design', '/interview/design/Singleton Pattern', '/interview/design/Factory  Pattern', '/interview/design/Strategy Pattern', '/interview/design/Proxy Pattern', '/interview/design/Observer  Pattern']
+        }
+      ],
+      '/SSR/': [
+        // node
+        {
+          text: 'Node',
+          collapsable: false,
           children: [
-            '/interview/design/design',
-            '/interview/design/Singleton Pattern',
-            '/interview/design/Factory  Pattern',
-            '/interview/design/Strategy Pattern',
-            '/interview/design/Proxy Pattern',
-            '/interview/design/Observer  Pattern'
+            '/SSR/Node/vue3NodeSSR.md',
+            '/SSR/Node/SSRHydration.md',
+            '/SSR/Node/vueSSRRouter.md',
+            '/SSR/Node/vueSSRPinia.md'
           ]
+        },
+        // nuxt
+        {
+          text: 'Nuxt',
+          collapsable: false,
+          children: [
+            '/SSR/Nuxt/what.md',
+            '/SSR/Nuxt/start.md',
+            '/SSR/Nuxt/directory.md',
+            '/SSR/Nuxt/nuxtConfig.md',
+            '/SSR/Nuxt/components.md',
+            '/SSR/Nuxt/css.md',
+            '/SSR/Nuxt/assest.md',
+            '/SSR/Nuxt/page.md',
+          ]
+        },
+        // next
+        {
+          text: 'Next',
+          collapsable: false,
+          children: []
         }
       ]
     },
