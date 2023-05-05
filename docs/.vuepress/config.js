@@ -697,6 +697,7 @@ export default {
             '/SSR/Nuxt/css.md',
             '/SSR/Nuxt/assest.md',
             '/SSR/Nuxt/page.md',
+            '/SSR/Nuxt/router.md',
           ]
         },
         // next

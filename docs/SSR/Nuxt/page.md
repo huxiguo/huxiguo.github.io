@@ -48,16 +48,3 @@ const goToCart = () => {
 或者使用 `useRouter`
 
 推荐使用 `navigateTo`
-
-## 动态路由
-
-根据目录名称生成
-
-- `pages/detail/[id].vue`
-- `pages/detail/user-[id].vue`
-- `pages/detail/[role]/[id].vue`
-- `pages/detail-[role]/[id].vue`
-
-动态路由 params 参数
-
-可以在路由跳转时带 query 参数
