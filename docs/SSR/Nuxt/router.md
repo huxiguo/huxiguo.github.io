@@ -85,3 +85,16 @@ export default defineNuxtRouteMiddleware((to, from) => {
 ## 路由验证
 
 - 支持对每个页面的路由进行验证
+
+```ts
+definePageMeta({
+  validate: route => {
+    console.log(route.params.id)
+    // return /^\d+$/.test(route.params.id as string)
+    return {
+      statusCode: 404,
+      statusMessage: 'Unauthorized'
+    }
+  }
+})
+```

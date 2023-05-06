@@ -698,6 +698,11 @@ export default {
             '/SSR/Nuxt/assest.md',
             '/SSR/Nuxt/page.md',
             '/SSR/Nuxt/router.md',
+            '/SSR/Nuxt/layout.md',
+            '/SSR/Nuxt/randerMode.md',
+            '/SSR/Nuxt/plugin.md',
+            '/SSR/Nuxt/lifecycle.md',
+            '/SSR/Nuxt/fetch.md',
           ]
         },
         // next
