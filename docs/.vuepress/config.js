@@ -703,6 +703,8 @@ export default {
             '/SSR/Nuxt/plugin.md',
             '/SSR/Nuxt/lifecycle.md',
             '/SSR/Nuxt/fetch.md',
+            '/SSR/Nuxt/api.md',
+            '/SSR/Nuxt/state.md',
           ]
         },
         // next
