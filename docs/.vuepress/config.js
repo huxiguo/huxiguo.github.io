@@ -180,7 +180,13 @@ export default {
         {
           text: 'Vue3',
           collapsible: true,
-          children: ['/vue/vue3/README.md', '/vue/vue3/create.md', '/vue/vue3/analyze.md', '/vue/vue3/composition.md']
+          children: [
+            '/vue/vue3/README.md',
+            '/vue/vue3/create.md',
+            '/vue/vue3/analyze.md',
+            '/vue/vue3/composition.md',
+            '/vue/vue3/vue-3.3.md'
+          ]
         },
         {
           text: 'Vue Cli指令',
@@ -711,7 +717,10 @@ export default {
         {
           text: 'Next',
           collapsable: false,
-          children: []
+          children: [
+            '/SSR/Next/what.md',
+            '/SSR/Next/start.md',
+          ]
         }
       ]
     },
