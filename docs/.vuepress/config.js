@@ -277,8 +277,7 @@ export default {
       '/js/': [
         {
           text: 'javascript',
-          collapsible: true,
-          children: ['/js/js.md']
+          children: ['/js/data_type.md']
         }
       ],
       '/utils/': [
