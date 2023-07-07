@@ -49,6 +49,11 @@ export default {
           children: ['/python/README.md']
         },
         {
+          text: 'leetcode',
+          collapsible: true,
+          children: ['/leetcode/README.md']
+        },
+        {
           text: '工程化',
           collapsible: true,
           children: ['/project/Webpack/README.md', '/project/Vite/README.md']
@@ -277,7 +282,10 @@ export default {
       '/js/': [
         {
           text: 'javascript',
-          children: ['/js/data_type.md']
+          children: [
+            '/js/data_type.md',
+            '/js/type_conversion.md'
+          ]
         }
       ],
       '/utils/': [
@@ -382,6 +390,17 @@ export default {
           text: '面向对象',
           // collapsible: true,
           children: ['/python/object/README.md']
+        }
+      ],
+      '/leetcode/': [
+        {
+          text: '算法题',
+          collapsible: false,
+          children: [
+            '/leetcode/maximum-split-of-positive-even-integers.md',
+            '/leetcode/remove-digit-from-number-to-maximize-result.md',
+            '/leetcode/valid-palindrome.md',
+          ]
         }
       ],
       '/interview/': [
