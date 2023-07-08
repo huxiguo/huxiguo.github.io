@@ -19,11 +19,6 @@ export default {
     sidebar: {
       '/': [
         {
-          text: '面试题',
-          collapsible: true,
-          children: ['/interview/README.md']
-        },
-        {
           text: 'CSS',
           collapsible: true,
           children: ['/CSS/README.md']
@@ -284,7 +279,10 @@ export default {
           text: 'javascript',
           children: [
             '/js/data_type.md',
-            '/js/type_conversion.md'
+            '/js/type_conversion.md',
+            '/js/eq',
+            '/js/copy',
+            '/js/inheritance'
           ]
         }
       ],
@@ -464,7 +462,7 @@ export default {
             '/interview/JavaScript/array_api',
             '/interview/JavaScript/string_api',
             '/interview/JavaScript/type_conversion',
-            '/interview/JavaScript/== _===',
+            '/interview/JavaScript/eq',
             '/interview/JavaScript/copy',
             '/interview/JavaScript/closure',
             '/interview/JavaScript/scope',
