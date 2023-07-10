@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-title: 开始
+title: TypeScript 基础
 description: TypeScript
 ---
 

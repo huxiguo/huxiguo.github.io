@@ -1,9 +1,9 @@
 ---
 lang: zh-CN
-title: 开始
+title: Vite
 ---
 
-# 开始
+# Vite
 
 [**vite 官方文档**](https://cn.vitejs.dev/)
 

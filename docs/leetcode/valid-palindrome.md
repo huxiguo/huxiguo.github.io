@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-title: 岛屿数量
+title: 验证回文串
 description: LeetCode
 ---
 

@@ -20,5 +20,3 @@ title: Vue
 ## [vueRouter 详](VRouter.md)
 
 ## [vue cli](Vue_cli.md)
-
-## [vue 源码](source/README.md)
