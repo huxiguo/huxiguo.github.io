@@ -1,9 +1,9 @@
 name: docs
 
 on:
-  # 每当 push 到 master 分支时触发部署
+  # 每当 push 到 main 分支时触发部署
   push:
-    branches: [master]
+    branches: [main]
   # 手动触发部署
   workflow_dispatch:
 
@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           # 选择要使用的 node 版本
-          node-version: '14.20.x'
+          node-version: "14.20.x"
 
       # 缓存 node_modules
       - name: Cache dependencies
@@ -49,7 +49,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           # 部署到 gh-pages 分支
-          target_branch: master
+          target_branch: main
           # 部署目录为 VuePress 的默认输出目录
           build_dir: docs/.vuepress/dist
         env:

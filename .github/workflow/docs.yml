@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           # 选择要使用的 node 版本
-          node-version: '14.18.x'
+          node-version: "14.18.x"
 
       # 缓存 node_modules
       - name: Cache dependencies
@@ -49,7 +49,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           # 部署到 gh-pages 分支
-          target_branch: master
+          target_branch: main
           # 部署目录为 VuePress 的默认输出目录
           build_dir: docs/.vuepress/dist
         env:

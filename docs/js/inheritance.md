@@ -14,7 +14,7 @@ description: javascript的继承
 
 在子类别继承父类别的同时，可以重新定义某些属性，并重写某些方法，即覆盖父类别的原有属性和方法，使其获得与父类别不同的功能
 
-虽然 JavaScript 并不是真正的面向对象语言，但它天生的灵活性，使应用场景更加
+虽然 JavaScript 并不是真正的面向对象语言，但它天生的灵活性，使应用场景更加丰富
 
 ```js
 // 动物类
@@ -192,8 +192,70 @@ p2.list.push(5); // [1,2,3,4,5]
 
 `Object.create` 方法实现的是浅拷贝，多个实例的引用类型属性指向相同的内存，存在篡改的可能
 
-原型式继承非常适合不需要单独创建构造函数，但仍然需要在对象间共享信息的场
+原型式继承非常适合不需要单独创建构造函数，但仍然需要在对象间共享信息的场景
 
 ### 寄生式继承
 
+```js
+// 寄生式继承
+
+let person = {
+  name: "aaaa",
+  getName: function () {
+    return this.name;
+  },
+};
+
+function parasitic(original) {
+  let res = Object.create(original);
+  res.sayHi = function () {
+    console.log(`hi${this.name}`);
+  };
+  return res;
+}
+
+let p1 = parasitic(person);
+
+p1.name = "xxxx";
+p1.sayHi();
+```
+
+可以为子类添加属性和方法，且不会对父类造成影响，但是对引用类型属性存在篡改的可能
+
 ### 寄生组合式继承
+
+```js
+// 寄生组合式继承
+
+function Person(name) {
+  this.name = name;
+  this.sayHi = function () {
+    console.log("hi");
+  };
+}
+
+Person.prototype.sayHello = function () {
+  console.log(`hello${this.name}`);
+};
+
+function clone(parent, child) {
+  child.prototype = Object.create(parent.prototype);
+  child.prototype.constructor = child;
+}
+
+function Child(name) {
+  Person.call(this, name);
+}
+
+clone(Person, Child);
+
+Child.prototype.getName = function () {
+  return this.name;
+};
+
+let c1 = new Child("xxxx");
+
+c1.sayHi();
+c1.sayHello();
+console.log(c1.getName());
+```
