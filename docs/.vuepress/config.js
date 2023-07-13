@@ -2,21 +2,21 @@ import { defaultTheme } from 'vuepress'
 export default {
   base: '/',
   lang: 'zh-CN',
-  title: 'huxiguo',
+  title: '胡熙国',
   description: 'my blogs',
   theme: defaultTheme({
     // 默认主题配置
     navbar: [
       {
-        text: 'Nuxtjs',
+        text: 'SSR入门',
         link: 'http://nuxt.yunog.cn'
       },
       {
-        text: 'echart',
+        text: 'echart-demo',
         link: 'http://echart.yunog.cn'
       },
       {
-        text: 'React-music',
+        text: '个人音乐',
         link: 'http://music.yunog.cn'
       },
       {
@@ -39,6 +39,9 @@ export default {
           '/HTML/Cookie与Session',
           '/HTML/HTML5新特性',
           '/HTML/LocalStorage与SessionStorage',
+          '/HTML/前端性能优化方案',
+          '/HTML/DOM和BOM的区别',
+          '/HTML/行内元素和块级元素',
         ]
       },
       // css
@@ -46,7 +49,18 @@ export default {
         text: 'CSS',
         collapsible: true,
         children: [
+          '/CSS/CSS引入方式',
           '/CSS/css',
+          '/CSS/CSS盒子模型',
+          '/CSS/CSS选择器',
+          '/CSS/CSS样式优先级',
+          '/CSS/Position定位',
+          '/CSS/Float浮动',
+          '/CSS/Flex布局',
+          '/CSS/Grid布局',
+          '/CSS/布局垂直居中',
+          '/CSS/实现三栏布局',
+          '/CSS/CSS隐藏元素的方法',
         ]
       },
       // js
@@ -54,11 +68,23 @@ export default {
         text: 'javaScript',
         collapsible: true,
         children: [
+          '/js/ES6新特性',
+          '/js/JS变量提升',
+          '/js/作用域与作用域链',
           '/js/data_type',
           '/js/type_conversion',
           '/js/eq',
           '/js/inheritance',
-          '/js/copy'
+          '/js/copy',
+          '/js/array',
+          '/js/Symbol',
+          '/js/defineProperty',
+          '/js/Js模块化导入导出',
+          '/js/let与const',
+          '/js/防抖与节流',
+          '/js/函数声明与函数表达式',
+          '/js/Js箭头函数',
+          '/js/uniapp-websocket'
         ]
       },
       // vue
@@ -89,7 +115,10 @@ export default {
               '/vue/vue3/vue-3.3.md'
             ]
           },
-          '/vue/Vue_cli.md',
+          '/vue/SPA单页应用的优缺点',
+          '/vue/MVVM',
+          '/vue/Vue2数据双向绑定',
+          '/vue/Vue_cli',
           '/vue/vite',
         ]
       },
@@ -196,9 +225,18 @@ export default {
           '/Git/github.md',
           '/command/linux_command.md'
         ]
+      },
+      // 面试
+      {
+        text: '面试',
+        collapsible: true,
+        children: [
+          '/interview-exp/2023-07-12'
+        ]
       }
     ],
     sidebarDepth: 0,
+    lastUpdated: false,
     contributors: true,
     contributorsText: '贡献者'
   })
