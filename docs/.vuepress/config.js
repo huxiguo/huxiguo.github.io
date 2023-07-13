@@ -78,13 +78,17 @@ export default {
           '/js/copy',
           '/js/array',
           '/js/Symbol',
+          '/js/promise',
           '/js/defineProperty',
           '/js/Js模块化导入导出',
           '/js/let与const',
           '/js/防抖与节流',
           '/js/函数声明与函数表达式',
           '/js/Js箭头函数',
-          '/js/uniapp-websocket'
+          '/js/事件循环',
+          '/js/uniapp-websocket',
+          '/js/大文件断点上传',
+          '/js/上拉加载下拉刷新'
         ]
       },
       // vue
