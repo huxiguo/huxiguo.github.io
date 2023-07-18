@@ -161,6 +161,7 @@ export default {
           '/leetcode/maximum-split-of-positive-even-integers',
           '/leetcode/remove-digit-from-number-to-maximize-result',
           '/leetcode/valid-palindrome',
+          '/leetcode/视频拼接',
         ]
       },
       // 工程化
@@ -220,6 +221,12 @@ export default {
           '/SSR/Nuxt/state.md',
         ]
       },
+      // git
+      {
+        text: 'Git',
+        collapsible: true,
+        children: []
+      },
       // 指令
       {
         text: '指令',
@@ -228,6 +235,56 @@ export default {
           '/Git/git.md',
           '/Git/github.md',
           '/command/linux_command.md'
+        ]
+      },
+      // js面试题
+      {
+        text: 'js面试题',
+        collapsible: true,
+        children: [
+          '/interview-js/箭头函数和普通函数的区别'
+        ]
+      },
+      // CSS面试题
+      {
+        text: 'CSS面试题',
+        collapsible: true,
+        children: [
+          '/interview-css/重绘和重排'
+        ]
+      },
+      // 浏览器面试题
+      {
+        text: '浏览器面试题',
+        collapsible: true,
+        children: [
+          '/interview-broswer/cookie'
+        ]
+      },
+      // 网络面试题
+      {
+        text: '网络面试题',
+        collapsible: true,
+        children: [
+          '/interview-network/TCP-IP协议',
+          '/interview-network/http状态码',
+          '/interview-network/TCP三次握手四次挥手',
+        ]
+      },
+      // 框架面试题
+      {
+        text: '框架面试题',
+        collapsible: true,
+        children: [
+          '/interview-frame/npminstall'
+        ]
+      },
+      // 手写代码题
+      {
+        text: '手写代码题',
+        collapsible: true,
+        children: [
+          '/interview-code/apply-call-bind'
         ]
       },
       // 面试
