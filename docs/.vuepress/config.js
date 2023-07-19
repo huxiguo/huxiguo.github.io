@@ -292,7 +292,8 @@ export default {
         text: '面试',
         collapsible: true,
         children: [
-          '/interview-exp/2023-07-12'
+          '/interview-exp/2023-07-12',
+          '/interview-exp/2023-07-19',
         ]
       }
     ],
