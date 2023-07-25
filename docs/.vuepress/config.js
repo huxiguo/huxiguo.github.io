@@ -2,6 +2,15 @@ import { defaultTheme } from 'vuepress'
 export default {
   base: '/',
   lang: 'zh-CN',
+  head: [['script', {}, `
+  var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?dontcopythisc696a0c7cf24973f0000f46233c";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s); })();
+  `
+  ]],
   title: '胡熙国',
   description: 'my blogs',
   theme: defaultTheme({
@@ -284,7 +293,8 @@ export default {
         text: '手写代码题',
         collapsible: true,
         children: [
-          '/interview-code/apply-call-bind'
+          '/interview-code/apply-call-bind',
+          '/interview-code/排序算法',
         ]
       },
       // 面试
@@ -294,6 +304,9 @@ export default {
         children: [
           '/interview-exp/2023-07-12',
           '/interview-exp/2023-07-19',
+          '/interview-exp/2023-07-20',
+          '/interview-exp/2023-07-25',
+          '/interview-exp/2023-07-25-fd',
         ]
       }
     ],
