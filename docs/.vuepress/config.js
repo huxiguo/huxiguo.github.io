@@ -171,6 +171,7 @@ s.parentNode.insertBefore(hm, s); })();
           '/leetcode/remove-digit-from-number-to-maximize-result',
           '/leetcode/valid-palindrome',
           '/leetcode/视频拼接',
+          '/leetcode/整数的各位积和之差'
         ]
       },
       // 工程化
@@ -251,7 +252,9 @@ s.parentNode.insertBefore(hm, s); })();
         text: 'js面试题',
         collapsible: true,
         children: [
-          '/interview-js/箭头函数和普通函数的区别'
+          '/interview-js/箭头函数和普通函数的区别',
+          '/interview-js/JS遍历数组',
+          '/interview-js/JS遍历对象'
         ]
       },
       // CSS面试题
@@ -259,7 +262,8 @@ s.parentNode.insertBefore(hm, s); })();
         text: 'CSS面试题',
         collapsible: true,
         children: [
-          '/interview-css/重绘和重排'
+          '/interview-css/重绘和重排',
+          '/interview-css/动画'
         ]
       },
       // 浏览器面试题
@@ -267,7 +271,8 @@ s.parentNode.insertBefore(hm, s); })();
         text: '浏览器面试题',
         collapsible: true,
         children: [
-          '/interview-broswer/cookie'
+          '/interview-broswer/cookie',
+          '/interview-broswer/webWorker'
         ]
       },
       // 网络面试题
@@ -285,7 +290,9 @@ s.parentNode.insertBefore(hm, s); })();
         text: '框架面试题',
         collapsible: true,
         children: [
-          '/interview-frame/npminstall'
+          '/interview-frame/npminstall',
+          '/interview-frame/ref和reactive区别',
+          '/interview-frame/npm和yarn和pnpm对比',
         ]
       },
       // 手写代码题
