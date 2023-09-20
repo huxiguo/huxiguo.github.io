@@ -171,7 +171,10 @@ s.parentNode.insertBefore(hm, s); })();
           '/leetcode/remove-digit-from-number-to-maximize-result',
           '/leetcode/valid-palindrome',
           '/leetcode/视频拼接',
-          '/leetcode/整数的各位积和之差'
+          '/leetcode/整数的各位积和之差',
+          '/leetcode/无重复字符串的最长子串',
+          '/leetcode//任意子数组和的绝对值的最大值',
+          '/leetcode/有效括号'
         ]
       },
       // 工程化
