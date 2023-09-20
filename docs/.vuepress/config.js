@@ -174,7 +174,8 @@ s.parentNode.insertBefore(hm, s); })();
           '/leetcode/整数的各位积和之差',
           '/leetcode/无重复字符串的最长子串',
           '/leetcode//任意子数组和的绝对值的最大值',
-          '/leetcode/有效括号'
+          '/leetcode/有效括号',
+          '/leetcode/移除元素'
         ]
       },
       // 工程化
