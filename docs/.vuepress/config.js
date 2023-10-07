@@ -175,7 +175,8 @@ s.parentNode.insertBefore(hm, s); })();
           '/leetcode/无重复字符串的最长子串',
           '/leetcode//任意子数组和的绝对值的最大值',
           '/leetcode/有效括号',
-          '/leetcode/移除元素'
+          '/leetcode/移除元素',
+          '/leetcode/找出字符串中第一个匹配项的下标'
         ]
       },
       // 工程化
