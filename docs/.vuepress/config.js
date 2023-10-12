@@ -172,11 +172,13 @@ s.parentNode.insertBefore(hm, s); })();
           '/leetcode/valid-palindrome',
           '/leetcode/视频拼接',
           '/leetcode/整数的各位积和之差',
-          '/leetcode/无重复字符串的最长子串',
-          '/leetcode//任意子数组和的绝对值的最大值',
+          '/leetcode/无重复字符的最长子串',
+          '/leetcode/任意子数组和的绝对值的最大值',
           '/leetcode/有效括号',
           '/leetcode/移除元素',
-          '/leetcode/找出字符串中第一个匹配项的下标'
+          '/leetcode/找出字符串中第一个匹配项的下标',
+          '/leetcode/最后一个单词的长度',
+          '/leetcode/加一'
         ]
       },
       // 工程化
