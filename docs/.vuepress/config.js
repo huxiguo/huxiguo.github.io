@@ -178,7 +178,8 @@ s.parentNode.insertBefore(hm, s); })();
           '/leetcode/移除元素',
           '/leetcode/找出字符串中第一个匹配项的下标',
           '/leetcode/最后一个单词的长度',
-          '/leetcode/加一'
+          '/leetcode/加一',
+          '/leetcode/x的平方根'
         ]
       },
       // 工程化
