@@ -312,6 +312,15 @@ s.parentNode.insertBefore(hm, s); })();
           '/interview-code/排序算法',
         ]
       },
+      // element-plus 工程源码解读
+      {
+        text: 'element-plus 工程学习',
+        collapsible: true,
+        children: [
+          '/element-plus/组件库工程化',
+          '/element-plus/初始化组件库',
+        ]
+      },
       // 面试
       {
         text: '面试',
