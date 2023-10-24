@@ -14,7 +14,7 @@ echo 'www.seekhoo.cn' > CNAME
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m 'update blogs'
 
 # 如果发布到 https://<USERNAME>.github.io
 git push -f https://github.com/huxiguo/huxiguo.github.io.git main:blogs
