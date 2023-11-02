@@ -328,6 +328,7 @@ s.parentNode.insertBefore(hm, s); })();
         collapsible: true,
         children: [
           '/interview-exp/常见面试题',
+          '/interview-exp/showmebug',
           '/interview-exp/2023-07-12',
           '/interview-exp/2023-07-19',
           '/interview-exp/2023-07-20',
