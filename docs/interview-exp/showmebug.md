@@ -79,3 +79,40 @@ function render(domNode) {
   return $el
 }
 ```
+
+- 给定仅包含2-9的字符串，返回所有能表示的字母组合，数字与字母映射与电话按键相同
+
+```ts
+function letterCombinations(digits: string): string[] {
+  if (digits.length === 0) return [];
+  const res: string[] = [];
+  const map: Record<any, string> = {
+    "2": "abc",
+    "3": "def",
+    "4": "ghi",
+    "5": "jkl",
+    "6": "mno",
+    "7": "pqrs",
+    "8": "tuv",
+    "9": "wxyz",
+  };
+  const dfs = (curStr: string, i: number) => {
+    if (i > digits.length - 1) {
+      res.push(curStr);
+      return;
+    }
+    const letter = map[digits[i]];
+    for (let val of letter) {
+      dfs(val + curStr, i + 1);
+    }
+  };
+  dfs("", 0);
+  return res;
+}
+console.log(letterCombinations("23"));
+
+```
+
+- evevt loop 原理描述，并通过伪代码举例
+
+- import 和 require 有什么区别？a.js b.js a调用b,b调用a,会出现死循环吗？为什么？

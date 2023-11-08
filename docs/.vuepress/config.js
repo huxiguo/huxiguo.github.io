@@ -163,6 +163,16 @@ s.parentNode.insertBefore(hm, s); })();
           '/TypeScript/config',
         ]
       },
+      // 前端测试
+      {
+        text: '前端测试',
+        collapsible: true,
+        children: [
+          '/testing/前端测试',
+          '/testing/单元测试',
+          '/testing/e2e'
+        ]
+      },
       // leetcode
       {
         text: 'leetcode',
@@ -335,7 +345,8 @@ s.parentNode.insertBefore(hm, s); })();
           '/interview-exp/2023-07-25',
           '/interview-exp/2023-07-25-fd',
         ]
-      }
+      },
+      // horizon
     ],
     sidebarDepth: 0,
     lastUpdated: false,
