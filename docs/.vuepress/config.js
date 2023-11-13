@@ -173,6 +173,13 @@ s.parentNode.insertBefore(hm, s); })();
           '/testing/e2e'
         ]
       },
+      {
+        text: '设计模式',
+        collapsible: true,
+        children: [
+          'patterns/工厂模式'
+        ]
+      },
       // leetcode
       {
         text: 'leetcode',
