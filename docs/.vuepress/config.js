@@ -177,7 +177,24 @@ s.parentNode.insertBefore(hm, s); })();
         text: '设计模式',
         collapsible: true,
         children: [
-          'patterns/工厂模式'
+          'patterns/简单工厂模式',
+          'patterns/工厂方法模式',
+        ]
+      },
+      // node
+      {
+        text: 'Node',
+        collapsible: true,
+        children: [
+          '/node/api_serve.md'
+        ]
+      },
+      // nestjs
+      {
+        text: 'nest',
+        collapsible: true,
+        children: [
+          '/nestjs/创建工程.md'
         ]
       },
       // leetcode
