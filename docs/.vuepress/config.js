@@ -194,7 +194,9 @@ s.parentNode.insertBefore(hm, s); })();
         text: 'nest',
         collapsible: true,
         children: [
-          '/nestjs/创建工程.md'
+          '/nestjs/创建工程.md',
+          '/nestjs/cli命令.md',
+          '/nestjs/接口版本控制.md',
         ]
       },
       // leetcode
