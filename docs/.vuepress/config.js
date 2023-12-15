@@ -186,7 +186,10 @@ s.parentNode.insertBefore(hm, s); })();
         text: 'Node',
         collapsible: true,
         children: [
-          '/node/api_serve.md'
+          '/node/api_serve.md',
+          '/node/AST.md',
+          '/node/webpack-loader.md',
+          '/node/webpack-plugin.md',
         ]
       },
       // nestjs
@@ -197,6 +200,8 @@ s.parentNode.insertBefore(hm, s); })();
           '/nestjs/创建工程.md',
           '/nestjs/cli命令.md',
           '/nestjs/接口版本控制.md',
+          '/nestjs/控制器.md',
+          '/nestjs/session.md',
         ]
       },
       // leetcode
