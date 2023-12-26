@@ -12,7 +12,7 @@
 - 第二次握手：服务器收到客户端的 SYN 报文之后，会以自己的 SYN 报文作为应答，为了确认客户端的 SYN，将客户端的 ISN+1 作为 ACK 的值，此时服务器处于 SYN_RCVD 的状态
 - 第三次握手：客户端收到 SYN 报文之后，会发送一个 ACK 报文，值为服务器的 ISN+1。此时客户端处于 ESTABLISHED 状态。服务器收到 ACK 报文之后，也处于 ESTABLISHED 状态，此时，双方已建立起了连接
 
-![](https://static.vue-js.com/fb489fc0-beb9-11eb-85f6-6fac77c0c9b3.png)
+![tcp](https://static.vue-js.com/fb489fc0-beb9-11eb-85f6-6fac77c0c9b3.png)
 
 上述每一次握手的作用如下：
 
@@ -42,7 +42,7 @@
 - 第三次挥手：如果服务端也想断开连接了，和客户端的第一次挥手一样，发给 FIN 报文，且指定一个序列号。此时服务端处于 `LAST_ACK` 的状态
 - 第四次挥手：客户端收到 FIN 之后，一样发送一个 ACK 报文作为应答，且把服务端的序列号值 +1 作为自己 ACK 报文的序列号值，此时客户端处于 TIME_WAIT 状态。需要过一阵子以确保服务端收到自己的 ACK 报文之后才会进入 CLOSED 状态，服务端收到 ACK 报文之后，就处于关闭连接了，处于 CLOSED 状态
 
-![](https://static.vue-js.com/0a3ebb90-beba-11eb-85f6-6fac77c0c9b3.png)
+![tcp](https://static.vue-js.com/0a3ebb90-beba-11eb-85f6-6fac77c0c9b3.png)
 
 ### 四次挥手原因
 
@@ -52,4 +52,4 @@
 
 一个完整的三次握手四次挥手如下图所示：
 
-![](https://static.vue-js.com/65941490-beba-11eb-85f6-6fac77c0c9b3.png)
+![tcp](https://static.vue-js.com/65941490-beba-11eb-85f6-6fac77c0c9b3.png)
