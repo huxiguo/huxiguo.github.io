@@ -1,0 +1,1 @@
+import{_ as t,o as r,c as a,a as e,b as o}from"./app.91a380bb.js";const c={},s=e("h1",{id:"react-router-dom-5",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#react-router-dom-5","aria-hidden":"true"},"#"),o(" react-router-dom 5")],-1),d=[s];function n(_,i){return r(),a("div",null,d)}const l=t(c,[["render",n],["__file","v6.html.vue"]]);export{l as default};

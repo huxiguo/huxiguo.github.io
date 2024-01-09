@@ -1,0 +1,39 @@
+import{_ as n,o as s,c as a,d as e}from"./app.91a380bb.js";const t={},c=e(`<h1 id="ref-\u548C-reactive-\u5F02\u540C" tabindex="-1"><a class="header-anchor" href="#ref-\u548C-reactive-\u5F02\u540C" aria-hidden="true">#</a> ref \u548C reactive \u5F02\u540C</h1><ol><li><code>ref</code> \u63A5\u53D7\u4E00\u4E2A\u5185\u90E8\u503C\uFF0C\u8FD4\u56DE\u4E00\u4E2A\u54CD\u5E94\u5F0F\u7684\u3001\u53EF\u66F4\u6539\u7684 <code>ref</code> \u5BF9\u8C61,<code>reactive</code> \u8FD4\u56DE\u54CD\u5E94\u5F0F\u4EE3\u7406\u5BF9\u8C61</li><li>\u4ECE\u5B9A\u4E49\u4E0A\u770B<code>ref</code>\u901A\u5E38\u7528\u4E8E\u5904\u7406\u57FA\u672C\u7C7B\u578B\u7684\u54CD\u5E94\u5F0F\uFF0C<code>reactive</code>\u7528\u4E8E\u5904\u7406\u5BF9\u8C61\u7C7B\u578B\u7684\u6570\u636E\u54CD\u5E94\u5F0F</li><li><code>ref</code> \u8FD4\u56DE\u7684\u54CD\u5E94\u5F0F\u6570\u636E\u5728 js \u4E2D\u4F7F\u7528\u9700\u8981\u52A0\u4E0A<code>.value</code>\u624D\u80FD\u8BBF\u95EE\uFF0C\u5728\u89C6\u56FE\u4E2D\u4F1A\u81EA\u52A8\u8131<code>ref</code>\uFF0C<code>ref</code>\u53EF\u4EE5\u63A5\u6536\u975E\u539F\u59CB\u503C\uFF0C\u4F46\u5185\u90E8\u4F9D\u7136\u662F<code>reactive</code>\u5B9E\u73B0\u7684\u54CD\u5E94\u5F0F\uFF1B<code>reactive</code>\u5185\u90E8\u5982\u679C\u63A5\u6536<code>Ref</code>\u5BF9\u8C61\u4F1A\u81EA\u52A8\u8131<code>ref</code>\u3002</li><li><code>reactive</code> \u5185\u90E8\u4F7F\u7528<code>Proxy</code>\u4EE3\u7406\u4F20\u5165\u7684\u5BF9\u8C61\u5E76\u4E14\u62E6\u622A\u8BE5\u5BF9\u8C61\u7684\u5404\u79CD\u64CD\u4F5C\uFF0C\u5B9E\u73B0\u54CD\u5E94\u5F0F\u3002<code>ref</code>\u5185\u90E8\u5C01\u88C5\u4E00\u4E2A<code>RefImpl</code>\u7C7B\uFF0C\u5E76\u4E14\u8BBE\u7F6E get set \u65B9\u6CD5\u62E6\u622A\u64CD\u4F5C\uFF0C\u5B9E\u73B0\u54CD\u5E94\u5F0F\u3002</li></ol><div class="language-typescript ext-ts line-numbers-mode"><pre class="language-typescript"><code><span class="token comment">// reactive</span>
+<span class="token keyword">function</span> <span class="token function">reactive</span><span class="token punctuation">(</span>traget<span class="token operator">:</span> object<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isReadonly</span><span class="token punctuation">(</span>traget<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token function">createReactiveObject</span><span class="token punctuation">(</span>
+    target<span class="token punctuation">,</span>
+    <span class="token boolean">false</span><span class="token punctuation">,</span>
+    mutableHandlers<span class="token punctuation">,</span>
+    mutableCollectionHandlers
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">createReactiveObject</span><span class="token punctuation">(</span>
+  target<span class="token punctuation">,</span>
+  isReadonly<span class="token punctuation">,</span>
+  baseHandlers<span class="token punctuation">,</span>
+  collectionHandlers
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token comment">// \u521B\u5EFA\u4EE3\u7406\u5BF9\u8C61</span>
+  <span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>
+    target<span class="token punctuation">,</span>
+    targetType <span class="token operator">===</span> TargetType<span class="token punctuation">.</span><span class="token constant">COLLECTION</span> <span class="token operator">?</span> collectionHandlers <span class="token operator">:</span> baseHandlers
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// \u5728 baseHandlers \u4E2D\u8FDB\u884C\u8BBF\u95EE\u62E6\u622A</span>
+  <span class="token keyword">return</span> proxy<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-typescript ext-ts line-numbers-mode"><pre class="language-typescript"><code><span class="token comment">// ref</span>
+<span class="token keyword">function</span> <span class="token function">ref</span><span class="token punctuation">(</span>value<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">createRef</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">createRef</span><span class="token punctuation">(</span>rawValue<span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">,</span> shallow<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isRef</span><span class="token punctuation">(</span>rawValue<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> rawValue<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">RefImpl</span><span class="token punctuation">(</span>rawValue<span class="token punctuation">,</span> shallow<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,4),o=[c];function p(l,i){return s(),a("div",null,o)}const r=n(t,[["render",p],["__file","ref\u548Creactive\u533A\u522B.html.vue"]]);export{r as default};

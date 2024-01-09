@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-6d5d7c78","path":"/interview-js/ajax.html","title":"Ajax","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[{"level":2,"title":"\u63CF\u8FF0","slug":"\u63CF\u8FF0","link":"#\u63CF\u8FF0","children":[]}],"git":{"contributors":[{"name":"huxiguo","email":"hu@seekhoo.cn","commits":1}]},"filePathRelative":"interview-js/ajax.md"}');export{e as data};

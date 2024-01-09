@@ -1,0 +1,14 @@
+import{_ as n,o as e,c as s,d as a}from"./app.91a380bb.js";const i={},l=a(`<h1 id="\u6A21\u5757" tabindex="-1"><a class="header-anchor" href="#\u6A21\u5757" aria-hidden="true">#</a> \u6A21\u5757</h1><h2 id="\u5BFC\u5165\u6A21\u5757" tabindex="-1"><a class="header-anchor" href="#\u5BFC\u5165\u6A21\u5757" aria-hidden="true">#</a> \u5BFC\u5165\u6A21\u5757</h2><p>1\uFE0F\u20E3</p><div class="language-python ext-py line-numbers-mode"><pre class="language-python"><code><span class="token keyword">import</span> time
+
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>2\uFE0F\u20E3</p><div class="language-python ext-py line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> time <span class="token keyword">import</span> sleep
+
+sleep<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>3\uFE0F\u20E3</p><div class="language-python ext-py line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> time <span class="token keyword">import</span> <span class="token operator">*</span>
+
+sleep<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>4\uFE0F\u20E3</p><div class="language-python ext-py line-numbers-mode"><pre class="language-python"><code><span class="token keyword">import</span> time <span class="token keyword">as</span> hh
+
+hh<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="\u5B89\u88C5\u5305" tabindex="-1"><a class="header-anchor" href="#\u5B89\u88C5\u5305" aria-hidden="true">#</a> \u5B89\u88C5\u5305</h2><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>pip <span class="token function">install</span> p_name
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>`,12),d=[l];function p(t,c){return e(),s("div",null,d)}const r=n(i,[["render",p],["__file","module.html.vue"]]);export{r as default};

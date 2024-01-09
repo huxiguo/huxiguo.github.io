@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-0f8e61d6","path":"/python/object/","title":"\u5F00\u59CB","lang":"zh-CN","frontmatter":{"lang":"zh-CN","title":"\u5F00\u59CB"},"excerpt":"","headers":[],"git":{"contributors":[{"name":"seekHoo","email":"hu@seekhoo.cn","commits":1}]},"filePathRelative":"python/object/README.md"}');export{e as data};

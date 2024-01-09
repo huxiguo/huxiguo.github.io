@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-bd5a4462","path":"/SSR/Nuxt/ui.html","title":"UI","lang":"zh-CN","frontmatter":{"lang":"zh-CN","title":"UI","description":"Nuxt"},"excerpt":"","headers":[],"git":{"contributors":[{"name":"seekHoo","email":"hu@seekhoo.cn","commits":2}]},"filePathRelative":"SSR/Nuxt/ui.md"}');export{t as data};

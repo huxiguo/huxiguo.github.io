@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-110d66bc","path":"/interview-frame/npmInstall.html","title":"npm install \u53D1\u751F\u4E86\u5565","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"contributors":[{"name":"huxiguo","email":"hu@seekhoo.cn","commits":2}]},"filePathRelative":"interview-frame/npmInstall.md"}');export{e as data};

@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-479a48bc","path":"/React/router/v6.html","title":"react-router-dom 6","lang":"zh-CN","frontmatter":{"lang":"zh-CN","title":"react-router-dom 6"},"excerpt":"","headers":[],"git":{"contributors":[{"name":"seekHoo","email":"hu@seekhoo.cn","commits":1}]},"filePathRelative":"React/router/v6.md"}');export{e as data};

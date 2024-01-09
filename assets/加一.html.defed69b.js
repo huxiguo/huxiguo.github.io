@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-628c9e86","path":"/leetcode/%E5%8A%A0%E4%B8%80.html","title":"\u52A0\u4E00","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"contributors":[{"name":"huxiguo","email":"hu@seekhoo.cn","commits":1}]},"filePathRelative":"leetcode/\u52A0\u4E00.md"}');export{e as data};
