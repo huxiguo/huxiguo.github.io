@@ -310,7 +310,8 @@ s.parentNode.insertBefore(hm, s); })();
           '/interview-js/webworker',
           '/interview-js/ajax',
           '/interview-js/函数式编程',
-          '/interview-js/addEventListener'
+          '/interview-js/addEventListener',
+          '/interview-js/判断数组的方法',
         ]
       },
       // CSS面试题
@@ -364,7 +365,11 @@ s.parentNode.insertBefore(hm, s); })();
           '/interview-code/apply-call-bind',
           '/interview-code/排序算法',
           '/interview-code/promise',
-          '/interview-code/获取出现次数前三的tag'
+          '/interview-code/获取出现次数前三的tag',
+          '/interview-code/sort',
+          '/interview-code/object属性',
+          '/interview-code/连续赋值',
+          '/interview-code/对象按要求填充数组',
         ]
       },
       // element-plus 工程源码解读
