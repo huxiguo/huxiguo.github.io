@@ -306,7 +306,11 @@ s.parentNode.insertBefore(hm, s); })();
         children: [
           '/interview-js/箭头函数和普通函数的区别',
           '/interview-js/JS遍历数组',
-          '/interview-js/JS遍历对象'
+          '/interview-js/JS遍历对象',
+          '/interview-js/webworker',
+          '/interview-js/ajax',
+          '/interview-js/函数式编程',
+          '/interview-js/addEventListener'
         ]
       },
       // CSS面试题
@@ -324,7 +328,8 @@ s.parentNode.insertBefore(hm, s); })();
         collapsible: true,
         children: [
           '/interview-broswer/cookie',
-          '/interview-broswer/webWorker'
+          '/interview-broswer/webWorker',
+          '/interview-broswer/BOM对象'
         ]
       },
       // 网络面试题
@@ -348,6 +353,7 @@ s.parentNode.insertBefore(hm, s); })();
           '/interview-frame/npminstall',
           '/interview-frame/ref和reactive区别',
           '/interview-frame/npm和yarn和pnpm对比',
+          '/interview-frame/ref-toRef-toRefs'
         ]
       },
       // 手写代码题
@@ -357,6 +363,8 @@ s.parentNode.insertBefore(hm, s); })();
         children: [
           '/interview-code/apply-call-bind',
           '/interview-code/排序算法',
+          '/interview-code/promise',
+          '/interview-code/获取出现次数前三的tag'
         ]
       },
       // element-plus 工程源码解读
